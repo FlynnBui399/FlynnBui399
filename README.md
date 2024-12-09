@@ -25,8 +25,3 @@
   <img src="https://img.shields.io/static/v1?message=Gmail&logo=gmail&label=&color=D14836&logoColor=white&labelColor=&style=for-the-badge" height="35" alt="gmail logo"  />
   <img src="https://img.shields.io/static/v1?message=LinkedIn&logo=linkedin&label=&color=0077B5&logoColor=white&labelColor=&style=for-the-badge" height="35" alt="linkedin logo"  />
 </div>
-###
-<div align="right">
-  < img src="https://i.pinimg.com/enabled/564x/04/1c/9a/041c9aea201023660436994e92305400.jpg"height="30"/>
-  <img width="12"/>
-
