@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="DASA_FinalProject_01.Employee">
+    <Position X="3.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAAkAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Exercise01\Employee.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DASA_FinalProject_01.Node">
+    <Position X="3.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAABAAA=</HashCode>
+      <FileName>Exercise01\CircularLinkedList.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DASA_FinalProject_01.CircularLinkedList">
+    <Position X="0.5" Y="0.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AgBIABAABAAAAAgAAAEABAAAAAAQSQAABAAABAEgABg=</HashCode>
+      <FileName>Exercise01\CircularLinkedList.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DASA_FinalProject_01.Queue">
+    <Position X="6.25" Y="0.5" Width="1.5" />
+    <NestedTypes>
+      <Class Name="DASA_FinalProject_01.Queue.Task" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Exercise02\Queue.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AABAAAAAABAAIBAAABAABAAAgAAAJAAAAAAICABAAAA=</HashCode>
+      <FileName>Exercise02\Queue.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DASA_FinalProject_01.DrawTree">
+    <Position X="10.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Exercise03\DrawTree.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DASA_FinalProject_01.BST">
+    <Position X="8.5" Y="0.5" Width="1.5" />
+    <NestedTypes>
+      <Class Name="DASA_FinalProject_01.BST.TreeNode" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Exercise03\BST.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AIAIAEAAAIAAAAgAAABgAAACAAEAMBAAAABhAABgQgA=</HashCode>
+      <FileName>Exercise03\BST.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
