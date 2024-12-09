@@ -30,15 +30,3 @@
   < img src="https://i.pinimg.com/enabled/564x/04/1c/9a/041c9aea201023660436994e92305400.jpg"height="30"/>
   <img width="12"/>
 
-
-
-
-- 🔭 I’m currently working on this page. 
-
-<a href="https://www.facebook.com/tf4st.flynn">
-    <img src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/facebook.svg" alt="facebook" height="40" style="fill: #006BFF;">
-</a>
-<a href="https://www.instagram.com/1th_f4st/">
-    <img src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/instagram.svg" alt="instagram" height="40" style="fill: #E4405F;">
-</a>
-
