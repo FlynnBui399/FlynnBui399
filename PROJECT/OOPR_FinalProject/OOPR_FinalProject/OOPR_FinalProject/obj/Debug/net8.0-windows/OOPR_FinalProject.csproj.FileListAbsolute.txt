@@ -1,0 +1,133 @@
+C:\Users\Admin\OneDrive\OOPR_FinalProject\OOPR_FinalProject\bin\Debug\net8.0-windows\OOPR_FinalProject.exe
+C:\Users\Admin\OneDrive\OOPR_FinalProject\OOPR_FinalProject\bin\Debug\net8.0-windows\OOPR_FinalProject.deps.json
+C:\Users\Admin\OneDrive\OOPR_FinalProject\OOPR_FinalProject\bin\Debug\net8.0-windows\OOPR_FinalProject.runtimeconfig.json
+C:\Users\Admin\OneDrive\OOPR_FinalProject\OOPR_FinalProject\bin\Debug\net8.0-windows\OOPR_FinalProject.dll
+C:\Users\Admin\OneDrive\OOPR_FinalProject\OOPR_FinalProject\bin\Debug\net8.0-windows\OOPR_FinalProject.pdb
+C:\Users\Admin\OneDrive\OOPR_FinalProject\OOPR_FinalProject\obj\Debug\net8.0-windows\OOPR_FinalProject.GuestForm.resources
+C:\Users\Admin\OneDrive\OOPR_FinalProject\OOPR_FinalProject\obj\Debug\net8.0-windows\OOPR_FinalProject.LoginForm.resources
+C:\Users\Admin\OneDrive\OOPR_FinalProject\OOPR_FinalProject\obj\Debug\net8.0-windows\OOPR_FinalProject.ManagerForm.resources
+C:\Users\Admin\OneDrive\OOPR_FinalProject\OOPR_FinalProject\obj\Debug\net8.0-windows\OOPR_FinalProject.Properties.Resources.resources
+C:\Users\Admin\OneDrive\OOPR_FinalProject\OOPR_FinalProject\obj\Debug\net8.0-windows\OOPR_FinalProject.ReceptionistForm.resources
+C:\Users\Admin\OneDrive\OOPR_FinalProject\OOPR_FinalProject\obj\Debug\net8.0-windows\OOPR_FinalProject.SplashForm.resources
+C:\Users\Admin\OneDrive\OOPR_FinalProject\OOPR_FinalProject\obj\Debug\net8.0-windows\OOPR_FinalProject.csproj.GenerateResource.cache
+C:\Users\Admin\OneDrive\OOPR_FinalProject\OOPR_FinalProject\obj\Debug\net8.0-windows\OOPR_FinalProject.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Admin\OneDrive\OOPR_FinalProject\OOPR_FinalProject\obj\Debug\net8.0-windows\OOPR_FinalProject.csproj.CoreCompileInputs.cache
+C:\Users\Admin\OneDrive\OOPR_FinalProject\OOPR_FinalProject\obj\Debug\net8.0-windows\OOPR_FinalProject.dll
+C:\Users\Admin\OneDrive\OOPR_FinalProject\OOPR_FinalProject\obj\Debug\net8.0-windows\refint\OOPR_FinalProject.dll
+C:\Users\Admin\OneDrive\OOPR_FinalProject\OOPR_FinalProject\obj\Debug\net8.0-windows\OOPR_FinalProject.pdb
+C:\Users\Admin\OneDrive\OOPR_FinalProject\OOPR_FinalProject\obj\Debug\net8.0-windows\OOPR_FinalProject.genruntimeconfig.cache
+C:\Users\Admin\OneDrive\OOPR_FinalProject\OOPR_FinalProject\obj\Debug\net8.0-windows\ref\OOPR_FinalProject.dll
+C:\Users\HP\OneDrive\OOPR_FinalProject\OOPR_FinalProject\bin\Debug\net8.0-windows\OOPR_FinalProject.exe
+C:\Users\HP\OneDrive\OOPR_FinalProject\OOPR_FinalProject\bin\Debug\net8.0-windows\OOPR_FinalProject.dll.config
+C:\Users\HP\OneDrive\OOPR_FinalProject\OOPR_FinalProject\bin\Debug\net8.0-windows\OOPR_FinalProject.deps.json
+C:\Users\HP\OneDrive\OOPR_FinalProject\OOPR_FinalProject\bin\Debug\net8.0-windows\OOPR_FinalProject.runtimeconfig.json
+C:\Users\HP\OneDrive\OOPR_FinalProject\OOPR_FinalProject\bin\Debug\net8.0-windows\OOPR_FinalProject.dll
+C:\Users\HP\OneDrive\OOPR_FinalProject\OOPR_FinalProject\bin\Debug\net8.0-windows\OOPR_FinalProject.pdb
+C:\Users\HP\OneDrive\OOPR_FinalProject\OOPR_FinalProject\obj\Debug\net8.0-windows\OOPR_FinalProject.GuestForm.resources
+C:\Users\HP\OneDrive\OOPR_FinalProject\OOPR_FinalProject\obj\Debug\net8.0-windows\OOPR_FinalProject.LoginForm.resources
+C:\Users\HP\OneDrive\OOPR_FinalProject\OOPR_FinalProject\obj\Debug\net8.0-windows\OOPR_FinalProject.ManagerForm.resources
+C:\Users\HP\OneDrive\OOPR_FinalProject\OOPR_FinalProject\obj\Debug\net8.0-windows\OOPR_FinalProject.Properties.Resources.resources
+C:\Users\HP\OneDrive\OOPR_FinalProject\OOPR_FinalProject\obj\Debug\net8.0-windows\OOPR_FinalProject.ReceptionistForm.resources
+C:\Users\HP\OneDrive\OOPR_FinalProject\OOPR_FinalProject\obj\Debug\net8.0-windows\OOPR_FinalProject.SplashForm.resources
+C:\Users\HP\OneDrive\OOPR_FinalProject\OOPR_FinalProject\obj\Debug\net8.0-windows\OOPR_FinalProject.csproj.GenerateResource.cache
+C:\Users\HP\OneDrive\OOPR_FinalProject\OOPR_FinalProject\obj\Debug\net8.0-windows\OOPR_FinalProject.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HP\OneDrive\OOPR_FinalProject\OOPR_FinalProject\obj\Debug\net8.0-windows\OOPR_FinalProject.csproj.CoreCompileInputs.cache
+C:\Users\HP\OneDrive\OOPR_FinalProject\OOPR_FinalProject\obj\Debug\net8.0-windows\OOPR_FinalProject.dll
+C:\Users\HP\OneDrive\OOPR_FinalProject\OOPR_FinalProject\obj\Debug\net8.0-windows\refint\OOPR_FinalProject.dll
+C:\Users\HP\OneDrive\OOPR_FinalProject\OOPR_FinalProject\obj\Debug\net8.0-windows\OOPR_FinalProject.pdb
+C:\Users\HP\OneDrive\OOPR_FinalProject\OOPR_FinalProject\obj\Debug\net8.0-windows\OOPR_FinalProject.genruntimeconfig.cache
+C:\Users\HP\OneDrive\OOPR_FinalProject\OOPR_FinalProject\obj\Debug\net8.0-windows\ref\OOPR_FinalProject.dll
+C:\Users\Admin\OneDrive\OOPR_FinalProject\OOPR_FinalProject\obj\Debug\net8.0-windows\OOPR_FinalProject.SignUpForm.resources
+C:\Users\Admin\OneDrive\OOPR_FinalProject\OOPR_FinalProject\bin\Debug\net8.0-windows\System.Configuration.ConfigurationManager.dll
+C:\Users\Admin\OneDrive\OOPR_FinalProject\OOPR_FinalProject\bin\Debug\net8.0-windows\System.Data.OleDb.dll
+C:\Users\Admin\OneDrive\OOPR_FinalProject\OOPR_FinalProject\bin\Debug\net8.0-windows\System.Diagnostics.EventLog.dll
+C:\Users\Admin\OneDrive\OOPR_FinalProject\OOPR_FinalProject\bin\Debug\net8.0-windows\System.Diagnostics.PerformanceCounter.dll
+C:\Users\Admin\OneDrive\OOPR_FinalProject\OOPR_FinalProject\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.Data.OleDb.dll
+C:\Users\Admin\OneDrive\OOPR_FinalProject\OOPR_FinalProject\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.Diagnostics.EventLog.dll
+C:\Users\Admin\OneDrive\OOPR_FinalProject\OOPR_FinalProject\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.Diagnostics.PerformanceCounter.dll
+C:\Users\Admin\OneDrive\OOPR_FinalProject\OOPR_FinalProject\obj\Debug\net8.0-windows\OOPR_FinalProject.csproj.AssemblyReference.cache
+C:\Users\Admin\OneDrive\OOPR_FinalProject\OOPR_FinalProject\obj\Debug\net8.0-windows\OOPR_Fin.C7D5C474.Up2Date
+C:\Users\Admin\OneDrive\OOPR_FinalProject\OOPR_FinalProject\obj\Debug\net8.0-windows\OOPR_FinalProject.GuestInfoForm.resources
+C:\Users\Admin\OneDrive\OOPR_FinalProject\OOPR_FinalProject\obj\Debug\net8.0-windows\OOPR_FinalProject.GuestBookingForm.resources
+C:\Users\Admin\OneDrive\OOPR_FinalProject\OOPR_FinalProject\obj\Debug\net8.0-windows\OOPR_FinalProject.GuestServicesForm.resources
+C:\Users\Admin\OneDrive\OOPR_FinalProject\OOPR_FinalProject\obj\Debug\net8.0-windows\OOPR_FinalProject.ManagerReportForm.resources
+C:\Users\Admin\OneDrive\OOPR_FinalProject\OOPR_FinalProject\obj\Debug\net8.0-windows\OOPR_FinalProject.ManagerRoomForm.resources
+C:\Users\Admin\OneDrive\OOPR_FinalProject\OOPR_FinalProject\obj\Debug\net8.0-windows\OOPR_FinalProject.Manager_Forms.ManagerCategoryForm.resources
+C:\Users\Admin\OneDrive\OOPR_FinalProject\OOPR_FinalProject\obj\Debug\net8.0-windows\OOPR_FinalProject.Receptionist_Forms.ReceptionistCheckInForm.resources
+C:\Users\Admin\OneDrive\OOPR_FinalProject\OOPR_FinalProject\obj\Debug\net8.0-windows\OOPR_FinalProject.Receptionist_Forms.ReceptionistCheckOutForm.resources
+C:\Users\Admin\OneDrive\OOPR_FinalProject\OOPR_FinalProject\obj\Debug\net8.0-windows\OOPR_FinalProject.StartUp_Forms.HotelMessageBox.resources
+C:\Users\HP\Documents\Zalo Received Files\OOPR_FinalProject (1)\OOPR_FinalProject\bin\Debug\net8.0-windows\OOPR_FinalProject.exe
+C:\Users\HP\Documents\Zalo Received Files\OOPR_FinalProject (1)\OOPR_FinalProject\bin\Debug\net8.0-windows\OOPR_FinalProject.deps.json
+C:\Users\HP\Documents\Zalo Received Files\OOPR_FinalProject (1)\OOPR_FinalProject\bin\Debug\net8.0-windows\OOPR_FinalProject.runtimeconfig.json
+C:\Users\HP\Documents\Zalo Received Files\OOPR_FinalProject (1)\OOPR_FinalProject\bin\Debug\net8.0-windows\OOPR_FinalProject.dll
+C:\Users\HP\Documents\Zalo Received Files\OOPR_FinalProject (1)\OOPR_FinalProject\bin\Debug\net8.0-windows\OOPR_FinalProject.pdb
+C:\Users\HP\Documents\Zalo Received Files\OOPR_FinalProject (1)\OOPR_FinalProject\bin\Debug\net8.0-windows\System.Configuration.ConfigurationManager.dll
+C:\Users\HP\Documents\Zalo Received Files\OOPR_FinalProject (1)\OOPR_FinalProject\bin\Debug\net8.0-windows\System.Data.OleDb.dll
+C:\Users\HP\Documents\Zalo Received Files\OOPR_FinalProject (1)\OOPR_FinalProject\bin\Debug\net8.0-windows\System.Diagnostics.EventLog.dll
+C:\Users\HP\Documents\Zalo Received Files\OOPR_FinalProject (1)\OOPR_FinalProject\bin\Debug\net8.0-windows\System.Diagnostics.PerformanceCounter.dll
+C:\Users\HP\Documents\Zalo Received Files\OOPR_FinalProject (1)\OOPR_FinalProject\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.Data.OleDb.dll
+C:\Users\HP\Documents\Zalo Received Files\OOPR_FinalProject (1)\OOPR_FinalProject\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.Diagnostics.EventLog.dll
+C:\Users\HP\Documents\Zalo Received Files\OOPR_FinalProject (1)\OOPR_FinalProject\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.Diagnostics.PerformanceCounter.dll
+C:\Users\HP\Documents\Zalo Received Files\OOPR_FinalProject (1)\OOPR_FinalProject\obj\Debug\net8.0-windows\OOPR_FinalProject.csproj.AssemblyReference.cache
+C:\Users\HP\Documents\Zalo Received Files\OOPR_FinalProject (1)\OOPR_FinalProject\obj\Debug\net8.0-windows\OOPR_FinalProject.GuestBookingForm.resources
+C:\Users\HP\Documents\Zalo Received Files\OOPR_FinalProject (1)\OOPR_FinalProject\obj\Debug\net8.0-windows\OOPR_FinalProject.GuestForm.resources
+C:\Users\HP\Documents\Zalo Received Files\OOPR_FinalProject (1)\OOPR_FinalProject\obj\Debug\net8.0-windows\OOPR_FinalProject.GuestInfoForm.resources
+C:\Users\HP\Documents\Zalo Received Files\OOPR_FinalProject (1)\OOPR_FinalProject\obj\Debug\net8.0-windows\OOPR_FinalProject.Manager_Forms.ManagerCategoryForm.resources
+C:\Users\HP\Documents\Zalo Received Files\OOPR_FinalProject (1)\OOPR_FinalProject\obj\Debug\net8.0-windows\OOPR_FinalProject.ManagerForm.resources
+C:\Users\HP\Documents\Zalo Received Files\OOPR_FinalProject (1)\OOPR_FinalProject\obj\Debug\net8.0-windows\OOPR_FinalProject.ManagerReportForm.resources
+C:\Users\HP\Documents\Zalo Received Files\OOPR_FinalProject (1)\OOPR_FinalProject\obj\Debug\net8.0-windows\OOPR_FinalProject.ManagerRoomForm.resources
+C:\Users\HP\Documents\Zalo Received Files\OOPR_FinalProject (1)\OOPR_FinalProject\obj\Debug\net8.0-windows\OOPR_FinalProject.Properties.Resources.resources
+C:\Users\HP\Documents\Zalo Received Files\OOPR_FinalProject (1)\OOPR_FinalProject\obj\Debug\net8.0-windows\OOPR_FinalProject.Receptionist_Forms.ReceptionistCheckInForm.resources
+C:\Users\HP\Documents\Zalo Received Files\OOPR_FinalProject (1)\OOPR_FinalProject\obj\Debug\net8.0-windows\OOPR_FinalProject.Receptionist_Forms.ReceptionistCheckOutForm.resources
+C:\Users\HP\Documents\Zalo Received Files\OOPR_FinalProject (1)\OOPR_FinalProject\obj\Debug\net8.0-windows\OOPR_FinalProject.ReceptionistForm.resources
+C:\Users\HP\Documents\Zalo Received Files\OOPR_FinalProject (1)\OOPR_FinalProject\obj\Debug\net8.0-windows\OOPR_FinalProject.StartUp_Forms.HotelMessageBox.resources
+C:\Users\HP\Documents\Zalo Received Files\OOPR_FinalProject (1)\OOPR_FinalProject\obj\Debug\net8.0-windows\OOPR_FinalProject.LoginForm.resources
+C:\Users\HP\Documents\Zalo Received Files\OOPR_FinalProject (1)\OOPR_FinalProject\obj\Debug\net8.0-windows\OOPR_FinalProject.SignUpForm.resources
+C:\Users\HP\Documents\Zalo Received Files\OOPR_FinalProject (1)\OOPR_FinalProject\obj\Debug\net8.0-windows\OOPR_FinalProject.SplashForm.resources
+C:\Users\HP\Documents\Zalo Received Files\OOPR_FinalProject (1)\OOPR_FinalProject\obj\Debug\net8.0-windows\OOPR_FinalProject.csproj.GenerateResource.cache
+C:\Users\HP\Documents\Zalo Received Files\OOPR_FinalProject (1)\OOPR_FinalProject\obj\Debug\net8.0-windows\OOPR_FinalProject.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HP\Documents\Zalo Received Files\OOPR_FinalProject (1)\OOPR_FinalProject\obj\Debug\net8.0-windows\OOPR_FinalProject.csproj.CoreCompileInputs.cache
+C:\Users\HP\Documents\Zalo Received Files\OOPR_FinalProject (1)\OOPR_FinalProject\obj\Debug\net8.0-windows\OOPR_Fin.C7D5C474.Up2Date
+C:\Users\HP\Documents\Zalo Received Files\OOPR_FinalProject (1)\OOPR_FinalProject\obj\Debug\net8.0-windows\OOPR_FinalProject.dll
+C:\Users\HP\Documents\Zalo Received Files\OOPR_FinalProject (1)\OOPR_FinalProject\obj\Debug\net8.0-windows\refint\OOPR_FinalProject.dll
+C:\Users\HP\Documents\Zalo Received Files\OOPR_FinalProject (1)\OOPR_FinalProject\obj\Debug\net8.0-windows\OOPR_FinalProject.pdb
+C:\Users\HP\Documents\Zalo Received Files\OOPR_FinalProject (1)\OOPR_FinalProject\obj\Debug\net8.0-windows\OOPR_FinalProject.genruntimeconfig.cache
+C:\Users\HP\Documents\Zalo Received Files\OOPR_FinalProject (1)\OOPR_FinalProject\obj\Debug\net8.0-windows\ref\OOPR_FinalProject.dll
+C:\Users\HP\Documents\Zalo Received Files\OOPR_FinalProject\OOPR_FinalProject\bin\Debug\net8.0-windows\OOPR_FinalProject.exe
+C:\Users\HP\Documents\Zalo Received Files\OOPR_FinalProject\OOPR_FinalProject\bin\Debug\net8.0-windows\OOPR_FinalProject.deps.json
+C:\Users\HP\Documents\Zalo Received Files\OOPR_FinalProject\OOPR_FinalProject\bin\Debug\net8.0-windows\OOPR_FinalProject.runtimeconfig.json
+C:\Users\HP\Documents\Zalo Received Files\OOPR_FinalProject\OOPR_FinalProject\bin\Debug\net8.0-windows\OOPR_FinalProject.dll
+C:\Users\HP\Documents\Zalo Received Files\OOPR_FinalProject\OOPR_FinalProject\bin\Debug\net8.0-windows\OOPR_FinalProject.pdb
+C:\Users\HP\Documents\Zalo Received Files\OOPR_FinalProject\OOPR_FinalProject\bin\Debug\net8.0-windows\System.Configuration.ConfigurationManager.dll
+C:\Users\HP\Documents\Zalo Received Files\OOPR_FinalProject\OOPR_FinalProject\bin\Debug\net8.0-windows\System.Data.OleDb.dll
+C:\Users\HP\Documents\Zalo Received Files\OOPR_FinalProject\OOPR_FinalProject\bin\Debug\net8.0-windows\System.Diagnostics.EventLog.dll
+C:\Users\HP\Documents\Zalo Received Files\OOPR_FinalProject\OOPR_FinalProject\bin\Debug\net8.0-windows\System.Diagnostics.PerformanceCounter.dll
+C:\Users\HP\Documents\Zalo Received Files\OOPR_FinalProject\OOPR_FinalProject\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.Data.OleDb.dll
+C:\Users\HP\Documents\Zalo Received Files\OOPR_FinalProject\OOPR_FinalProject\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.Diagnostics.EventLog.dll
+C:\Users\HP\Documents\Zalo Received Files\OOPR_FinalProject\OOPR_FinalProject\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.Diagnostics.PerformanceCounter.dll
+C:\Users\HP\Documents\Zalo Received Files\OOPR_FinalProject\OOPR_FinalProject\obj\Debug\net8.0-windows\OOPR_FinalProject.csproj.AssemblyReference.cache
+C:\Users\HP\Documents\Zalo Received Files\OOPR_FinalProject\OOPR_FinalProject\obj\Debug\net8.0-windows\OOPR_FinalProject.GuestBookingForm.resources
+C:\Users\HP\Documents\Zalo Received Files\OOPR_FinalProject\OOPR_FinalProject\obj\Debug\net8.0-windows\OOPR_FinalProject.GuestForm.resources
+C:\Users\HP\Documents\Zalo Received Files\OOPR_FinalProject\OOPR_FinalProject\obj\Debug\net8.0-windows\OOPR_FinalProject.GuestInfoForm.resources
+C:\Users\HP\Documents\Zalo Received Files\OOPR_FinalProject\OOPR_FinalProject\obj\Debug\net8.0-windows\OOPR_FinalProject.Manager_Forms.ManagerCategoryForm.resources
+C:\Users\HP\Documents\Zalo Received Files\OOPR_FinalProject\OOPR_FinalProject\obj\Debug\net8.0-windows\OOPR_FinalProject.ManagerForm.resources
+C:\Users\HP\Documents\Zalo Received Files\OOPR_FinalProject\OOPR_FinalProject\obj\Debug\net8.0-windows\OOPR_FinalProject.ManagerReportForm.resources
+C:\Users\HP\Documents\Zalo Received Files\OOPR_FinalProject\OOPR_FinalProject\obj\Debug\net8.0-windows\OOPR_FinalProject.ManagerRoomForm.resources
+C:\Users\HP\Documents\Zalo Received Files\OOPR_FinalProject\OOPR_FinalProject\obj\Debug\net8.0-windows\OOPR_FinalProject.Properties.Resources.resources
+C:\Users\HP\Documents\Zalo Received Files\OOPR_FinalProject\OOPR_FinalProject\obj\Debug\net8.0-windows\OOPR_FinalProject.Receptionist_Forms.ReceptionistCheckInForm.resources
+C:\Users\HP\Documents\Zalo Received Files\OOPR_FinalProject\OOPR_FinalProject\obj\Debug\net8.0-windows\OOPR_FinalProject.Receptionist_Forms.ReceptionistCheckOutForm.resources
+C:\Users\HP\Documents\Zalo Received Files\OOPR_FinalProject\OOPR_FinalProject\obj\Debug\net8.0-windows\OOPR_FinalProject.ReceptionistForm.resources
+C:\Users\HP\Documents\Zalo Received Files\OOPR_FinalProject\OOPR_FinalProject\obj\Debug\net8.0-windows\OOPR_FinalProject.StartUp_Forms.HotelMessageBox.resources
+C:\Users\HP\Documents\Zalo Received Files\OOPR_FinalProject\OOPR_FinalProject\obj\Debug\net8.0-windows\OOPR_FinalProject.LoginForm.resources
+C:\Users\HP\Documents\Zalo Received Files\OOPR_FinalProject\OOPR_FinalProject\obj\Debug\net8.0-windows\OOPR_FinalProject.SignUpForm.resources
+C:\Users\HP\Documents\Zalo Received Files\OOPR_FinalProject\OOPR_FinalProject\obj\Debug\net8.0-windows\OOPR_FinalProject.SplashForm.resources
+C:\Users\HP\Documents\Zalo Received Files\OOPR_FinalProject\OOPR_FinalProject\obj\Debug\net8.0-windows\OOPR_FinalProject.csproj.GenerateResource.cache
+C:\Users\HP\Documents\Zalo Received Files\OOPR_FinalProject\OOPR_FinalProject\obj\Debug\net8.0-windows\OOPR_FinalProject.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HP\Documents\Zalo Received Files\OOPR_FinalProject\OOPR_FinalProject\obj\Debug\net8.0-windows\OOPR_FinalProject.csproj.CoreCompileInputs.cache
+C:\Users\HP\Documents\Zalo Received Files\OOPR_FinalProject\OOPR_FinalProject\obj\Debug\net8.0-windows\OOPR_Fin.C7D5C474.Up2Date
+C:\Users\HP\Documents\Zalo Received Files\OOPR_FinalProject\OOPR_FinalProject\obj\Debug\net8.0-windows\OOPR_FinalProject.dll
+C:\Users\HP\Documents\Zalo Received Files\OOPR_FinalProject\OOPR_FinalProject\obj\Debug\net8.0-windows\refint\OOPR_FinalProject.dll
+C:\Users\HP\Documents\Zalo Received Files\OOPR_FinalProject\OOPR_FinalProject\obj\Debug\net8.0-windows\OOPR_FinalProject.pdb
+C:\Users\HP\Documents\Zalo Received Files\OOPR_FinalProject\OOPR_FinalProject\obj\Debug\net8.0-windows\OOPR_FinalProject.genruntimeconfig.cache
+C:\Users\HP\Documents\Zalo Received Files\OOPR_FinalProject\OOPR_FinalProject\obj\Debug\net8.0-windows\ref\OOPR_FinalProject.dll
+C:\Users\HP\Documents\Zalo Received Files\OOPR_FinalProject\OOPR_FinalProject\obj\Debug\net8.0-windows\OOPR_FinalProject.Guest_Forms.RoomAvailableForm.resources
