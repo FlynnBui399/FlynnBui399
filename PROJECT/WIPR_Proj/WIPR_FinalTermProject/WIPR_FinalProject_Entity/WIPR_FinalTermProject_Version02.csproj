@@ -1,0 +1,446 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{23A4A376-EB00-4289-B6EE-32CFC8AD65EA}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>WIPR_FinalProject_Entity</RootNamespace>
+    <AssemblyName>WIPR_FinalProject_Entity</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AxInterop.WMPLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\WMPLib.1.0.0\lib\AxInterop.WMPLib.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1652.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1652.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1652.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1652.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\ReportViewer.WebForms.12.0.2402.20\lib\Microsoft.ReportViewer.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1652.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Album.cs">
+      <DependentUpon>MusicLibraryDB.tt</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Artist.cs">
+      <DependentUpon>MusicLibraryDB.tt</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="BS Layer\BL_Album.cs" />
+    <Compile Include="BS Layer\BL_Artist.cs" />
+    <Compile Include="BS Layer\BL_Genre.cs" />
+    <Compile Include="BS Layer\BL_Playlist.cs" />
+    <Compile Include="BS Layer\BL_Song.cs" />
+    <Compile Include="BS Layer\BL_Statistics.cs" />
+    <Compile Include="BS Layer\BL_Users.cs" />
+    <Compile Include="BS Layer\BL_FavPlaylist.cs" />
+    <Compile Include="Classes\DataGridViewHelper.cs" />
+    <Compile Include="Classes\EmailHelper.cs" />
+    <Compile Include="Classes\EmailSettings.cs" />
+    <Compile Include="FavoritePlaylist.cs">
+      <DependentUpon>MusicLibraryDB.tt</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Genre.cs">
+      <DependentUpon>MusicLibraryDB.tt</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Interface Layer\FormAddEditAlbum.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interface Layer\FormAddEditAlbum.Designer.cs">
+      <DependentUpon>FormAddEditAlbum.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interface Layer\FormAddEditArtist.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interface Layer\FormAddEditArtist.Designer.cs">
+      <DependentUpon>FormAddEditArtist.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interface Layer\FormAddEditGenre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interface Layer\FormAddEditGenre.Designer.cs">
+      <DependentUpon>FormAddEditGenre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interface Layer\FormAddEditPlaylist.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interface Layer\FormAddEditPlaylist.Designer.cs">
+      <DependentUpon>FormAddEditPlaylist.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interface Layer\FormAddEditSong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interface Layer\FormAddEditSong.Designer.cs">
+      <DependentUpon>FormAddEditSong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interface Layer\FormAlbums.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interface Layer\FormAlbums.Designer.cs">
+      <DependentUpon>FormAlbums.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interface Layer\FormArtists.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interface Layer\FormArtists.Designer.cs">
+      <DependentUpon>FormArtists.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interface Layer\FormFavorites.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interface Layer\FormFavorites.Designer.cs">
+      <DependentUpon>FormFavorites.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interface Layer\FormGenre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interface Layer\FormGenre.Designer.cs">
+      <DependentUpon>FormGenre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interface Layer\FormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interface Layer\FormMain.Designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interface Layer\FormPlaylists.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interface Layer\FormPlaylists.Designer.cs">
+      <DependentUpon>FormPlaylists.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interface Layer\FormPlaylistSongs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interface Layer\FormPlaylistSongs.Designer.cs">
+      <DependentUpon>FormPlaylistSongs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interface Layer\FormSongs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interface Layer\FormSongs.Designer.cs">
+      <DependentUpon>FormSongs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interface Layer\FormStatistics.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interface Layer\FormStatistics.Designer.cs">
+      <DependentUpon>FormStatistics.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interface Layer\UtilsForm\FormForgotPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interface Layer\UtilsForm\FormForgotPassword.Designer.cs">
+      <DependentUpon>FormForgotPassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interface Layer\UtilsForm\FormLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interface Layer\UtilsForm\FormLogin.Designer.cs">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interface Layer\UtilsForm\FormRegister.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interface Layer\UtilsForm\FormRegister.Designer.cs">
+      <DependentUpon>FormRegister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interface Layer\UtilsForm\FormResetPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interface Layer\UtilsForm\FormResetPassword.Designer.cs">
+      <DependentUpon>FormResetPassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interface Layer\UtilsForm\FormSetupEmail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interface Layer\UtilsForm\FormSetupEmail.Designer.cs">
+      <DependentUpon>FormSetupEmail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MusicLibraryDB.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MusicLibraryDB.Context.tt</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="MusicLibraryDB.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MusicLibraryDB.tt</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="MusicLibraryDB.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MusicLibraryDB.edmx</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Playlist.cs">
+      <DependentUpon>MusicLibraryDB.tt</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="PlaylistSong.cs">
+      <DependentUpon>MusicLibraryDB.tt</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RDLC layer\DatabaseDiagram.cs">
+      <DependentUpon>DatabaseDiagram.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="RDLC layer\DatabaseDiagram.Designer.cs">
+      <DependentUpon>DatabaseDiagram.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RDLC layer\DatabaseDiagram1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DatabaseDiagram.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="RDLC layer\StatisticsDataSet.cs">
+      <DependentUpon>StatisticsDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="RDLC layer\StatisticsDataSet.Designer.cs">
+      <DependentUpon>StatisticsDataSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RDLC layer\StatisticsDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StatisticsDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Song.cs">
+      <DependentUpon>MusicLibraryDB.tt</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="User.cs">
+      <DependentUpon>MusicLibraryDB.tt</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <EmbeddedResource Include="Interface Layer\FormAddEditAlbum.resx">
+      <DependentUpon>FormAddEditAlbum.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interface Layer\FormAddEditArtist.resx">
+      <DependentUpon>FormAddEditArtist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interface Layer\FormAddEditGenre.resx">
+      <DependentUpon>FormAddEditGenre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interface Layer\FormAddEditPlaylist.resx">
+      <DependentUpon>FormAddEditPlaylist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interface Layer\FormAddEditSong.resx">
+      <DependentUpon>FormAddEditSong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interface Layer\FormAlbums.resx">
+      <DependentUpon>FormAlbums.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interface Layer\FormArtists.resx">
+      <DependentUpon>FormArtists.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interface Layer\FormFavorites.resx">
+      <DependentUpon>FormFavorites.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interface Layer\FormGenre.resx">
+      <DependentUpon>FormGenre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interface Layer\FormMain.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interface Layer\FormPlaylists.resx">
+      <DependentUpon>FormPlaylists.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interface Layer\FormPlaylistSongs.resx">
+      <DependentUpon>FormPlaylistSongs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interface Layer\FormSongs.resx">
+      <DependentUpon>FormSongs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interface Layer\FormStatistics.resx">
+      <DependentUpon>FormStatistics.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interface Layer\UtilsForm\FormForgotPassword.resx">
+      <DependentUpon>FormForgotPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interface Layer\UtilsForm\FormLogin.resx">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interface Layer\UtilsForm\FormRegister.resx">
+      <DependentUpon>FormRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interface Layer\UtilsForm\FormResetPassword.resx">
+      <DependentUpon>FormResetPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interface Layer\UtilsForm\FormSetupEmail.resx">
+      <DependentUpon>FormSetupEmail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EntityDeploy Include="MusicLibraryDB.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>MusicLibraryDB.Designer.cs</LastGenOutput>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EntityDeploy>
+    <None Include="MusicLibraryDB.edmx.diagram">
+      <DependentUpon>MusicLibraryDB.edmx</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Content Include="MusicLibraryDB.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>MusicLibraryDB.edmx</DependentUpon>
+      <LastGenOutput>MusicLibraryDB.Context.cs</LastGenOutput>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="MusicLibraryDB.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>MusicLibraryDB.edmx</DependentUpon>
+      <LastGenOutput>MusicLibraryDB.cs</LastGenOutput>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="RDLC layer\AlbumReport.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="RDLC layer\ArtistReport.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="RDLC layer\DatabaseDiagram.xsc">
+      <DependentUpon>DatabaseDiagram.xsd</DependentUpon>
+    </None>
+    <None Include="RDLC layer\DatabaseDiagram.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DatabaseDiagram1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="RDLC layer\DatabaseDiagram.xss">
+      <DependentUpon>DatabaseDiagram.xsd</DependentUpon>
+    </None>
+    <Content Include="RDLC layer\GenreReport.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="RDLC layer\PlaylistReport.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="RDLC layer\PlaylistSongsSubReport.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="RDLC layer\StatisticsDataSet.xsc">
+      <DependentUpon>StatisticsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="RDLC layer\StatisticsDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>StatisticsDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="RDLC layer\StatisticsDataSet.xss">
+      <DependentUpon>StatisticsDataSet.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="stdole">
+      <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

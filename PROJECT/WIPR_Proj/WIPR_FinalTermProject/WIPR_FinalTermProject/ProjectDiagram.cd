@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="WIPR_FinalTermProject.Classes.DataGridViewHelper">
+    <Position X="1.25" Y="1.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Classes\DataGridViewHelper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WIPR_FinalTermProject.Classes.EmailHelper">
+    <Position X="3.5" Y="1.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Classes\EmailHelper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WIPR_FinalTermProject.Classes.EmailSettings">
+    <Position X="6" Y="1.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAABAIACgAAAAAAAAAAAABAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>Classes\EmailSettings.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
