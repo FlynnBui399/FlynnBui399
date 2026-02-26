@@ -21,9 +21,12 @@
 ---
 
 ### 📊 GitHub Stats
-<div align='center'>
-[![GitHub Streak](https://streak-stats.demolab.com/?user=FlynnBui399&theme=merko)](https://git.io/streak-stats)
-</div>
+<p align="center">
+  <a href="https://git.io/streak-stats">
+    <img src="https://streak-stats.demolab.com/?user=FlynnBui399&theme=merko" alt="GitHub Streak"/>
+  </a>
+</p>
+
 ---
 # Thanks for visiting my profile👾💗
 [![](https://visitcount.itsvg.in/api?id=FlynnBui399&icon=0&color=0)](https://visitcount.itsvg.in)
