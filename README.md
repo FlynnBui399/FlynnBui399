@@ -1,7 +1,4 @@
 <!-- Trungquandev -->
-<a href="#" target="_blank">
-  <img src="svg/flynn.svg" width="1200" alt="FlynnBui"/>
-</a>
 
 <h2 align="center">🛠 Languages and Tools 🛠</h2>
 <br>
