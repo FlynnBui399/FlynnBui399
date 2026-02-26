@@ -28,7 +28,10 @@
 </p>
 
 ---
-# Thanks for visiting my profile👾💗
+<p align="center">
+  <strong>Thanks for visiting my profile👾💗</strong>
+</p>
+
 [![](https://visitcount.itsvg.in/api?id=FlynnBui399&icon=0&color=0)](https://visitcount.itsvg.in)
 
 <!-- Proudly created with GPRM ( https://gprm.itsvg.in ) -->
