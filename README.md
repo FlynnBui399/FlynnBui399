@@ -24,9 +24,10 @@
 ![](https://github-readme-stats.vercel.app/api?username=FlynnBui399&theme=shadow_blue&hide_border=false&include_all_commits=false&count_private=false)<br/>
 ![](https://nirzak-streak-stats.vercel.app/?user=FlynnBui399&theme=shadow_blue&hide_border=false)<br/>
 ![](https://github-readme-stats.vercel.app/api/top-langs/?username=FlynnBui399&theme=shadow_blue&hide_border=false&include_all_commits=false&count_private=false&layout=compact)
+[![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=FlynnBui399&show_icons=true&theme=tokyonight)](https://github.com/anuraghazra/github-readme-stats)
 
 ---
-
+# Thanks for visiting my profile👾💗
 [![](https://visitcount.itsvg.in/api?id=FlynnBui399&icon=0&color=0)](https://visitcount.itsvg.in)
-[![](https://github-readme-stats.vercel.app/api?username=FlynnBui399)](https://github.com/anuraghazra/github-readme-stats)
+
 <!-- Proudly created with GPRM ( https://gprm.itsvg.in ) -->
