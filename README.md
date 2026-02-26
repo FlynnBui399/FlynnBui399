@@ -1,21 +1,5 @@
-<!-- Trungquandev -->
-
 <h2 align="center">🛠 Languages and Tools 🛠</h2>
-<br>
-<span><img src="https://img.shields.io/badge/Cplusplus-003161?logo=cplusplus&logoColor=00599C" alt="C++ logo" title="C++" height="25" /></span>
-&nbsp;
-<span><img src="https://img.shields.io/badge/Dotnet-003161?logo=Dotnet&logoColor=512BD4" alt=".NET logo" title=".NET" height="25" /></span>
-&nbsp;
-<span><img src="https://img.shields.io/badge/Python-003161?logo=python&logoColor=3776AB" alt="Pythonlogo" title="Python" height="25" /></span>
-&nbsp;
-<span><img src="https://img.shields.io/badge/C-003161?logo=c&logoColor=A8B9CC" alt="C logo" title="C" height="25" /></span
-&nbsp;
-<br>
-<h2 align="center">🎮 Video Game 🎮</h2>
-<span><img src="https://img.shields.io/badge/LOL-1A1A1D?logo=leagueoflegends&logoColor=C28F2C" alt="C logo" title="C" height="25" /></span>
-<span><img src="https://img.shields.io/badge/Discord-1A1A1D?logo=discord&logoColor=5865F2" alt="C logo" title="C" height="25" /></span>
-<br>
-<br>
+![C++](https://img.shields.io/badge/c++-%2300599C.svg?style=for-the-badge&logo=c%2B%2B&logoColor=white) ![C#](https://img.shields.io/badge/c%23-%23239120.svg?style=for-the-badge&logo=csharp&logoColor=white) ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54) ![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white) ![.Net](https://img.shields.io/badge/.NET-5C2D91?style=for-the-badge&logo=.net&logoColor=white) ![Bootstrap](https://img.shields.io/badge/bootstrap-%238511FA.svg?style=for-the-badge&logo=bootstrap&logoColor=white) ![OpenCV](https://img.shields.io/badge/opencv-%23white.svg?style=for-the-badge&logo=opencv&logoColor=white) ![MySQL](https://img.shields.io/badge/mysql-4479A1.svg?style=for-the-badge&logo=mysql&logoColor=white) ![Postgres](https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white) ![Supabase](https://img.shields.io/badge/Supabase-3ECF8E?style=for-the-badge&logo=supabase&logoColor=white) ![Canva](https://img.shields.io/badge/Canva-%2300C4CC.svg?style=for-the-badge&logo=Canva&logoColor=white) ![Pandas](https://img.shields.io/badge/pandas-%23150458.svg?style=for-the-badge&logo=pandas&logoColor=white) ![NumPy](https://img.shields.io/badge/numpy-%23013243.svg?style=for-the-badge&logo=numpy&logoColor=white) ![TensorFlow](https://img.shields.io/badge/TensorFlow-%23FF6F00.svg?style=for-the-badge&logo=TensorFlow&logoColor=white) ![PyTorch](https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?style=for-the-badge&logo=PyTorch&logoColor=white) ![scikit-learn](https://img.shields.io/badge/scikit--learn-%23F7931E.svg?style=for-the-badge&logo=scikit-learn&logoColor=white) ![Matplotlib](https://img.shields.io/badge/Matplotlib-%23ffffff.svg?style=for-the-badge&logo=Matplotlib&logoColor=black) ![Keras](https://img.shields.io/badge/Keras-%23D00000.svg?style=for-the-badge&logo=Keras&logoColor=white) ![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white) ![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white) ![Riot Games](https://img.shields.io/badge/riotgames-D32936.svg?style=for-the-badge&logo=riotgames&logoColor=white)
 <h2 align="center">🔥 GitHub Stats 🔥</h2>
 <br>
 <div align=center>
