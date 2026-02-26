@@ -3,18 +3,16 @@
   <!-- Replace the GIF URL below with the actual link after you upload your GIF -->
   <img src="https://github.com/FlynnBui399/FlynnBui399/blob/main/profile_gif/Bui%20Tran%20Tan%20phat.gif" alt="Bui Tran Tan Phat - AI Engineering in HCMUTE" />
   
-  <h1>Bui Tran Tan Phat</h1>
-  <h3>AI Engineering @ HCMUTE</h3>
-
 </div>
 
 ---
 
 ### 👋 About Me
-- 🎓 **AI Engineering student at HCMUTE**
-- 🤖 **Interested in Machine Learning, Computer Vision, and MLOps**
-- 🚀 **Building AI-powered applications and experimenting with deep learning frameworks**
-
+- 🎓 **AI Engineering Concentrate at HCMUTE**
+- 🤖 **Interested in Machine Learning, Computer Visions | GPA: 3.21/4.0**
+- 🚀 **Exploring computer vision, deep learning, and generative AI to build intelligent visual applications.**
+- 📖 **Hope for the best, but prepare for the worst"**
+> "Some people call this artificial intelligence, but the reality is this technology will enhance us. So, instead of artificial intelligence, I think we’ll augment our intelligence."
 ---
 
 ### 💻 Tech Stack
