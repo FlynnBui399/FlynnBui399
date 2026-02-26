@@ -21,7 +21,7 @@
 ---
 
 ### 📊 GitHub Stats
-[![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=FlynnBui399)](https://github.com/FlynnBui399/github-readme-stats)
+[![GitHub Streak](https://streak-stats.demolab.com/?user=FlynnBui399&theme=merko)](https://git.io/streak-stats)
 
 ---
 # Thanks for visiting my profile👾💗
