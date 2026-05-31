@@ -1,7 +1,7 @@
 <div align="center">
   
   <!-- Replace the GIF URL below with the actual link after you upload your GIF -->
-  <img src="https://github.com/FlynnBui399/FlynnBui399/blob/main/profile_gif/Bui%20Tran%20Tan%20phat.gif" alt="Bui Tran Tan Phat - AI Engineering in HCMUTE" />
+  <img src="https://github.com/FlynnBui399/FlynnBui399/blob/main/profile_gif/cover_github.jpeg" alt="Bui Tran Tan Phat - AI Engineering in HCMUTE" />
   
 </div>
 
