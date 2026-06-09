@@ -1,941 +1,700 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BUI TRAN TAN PHAT — AI ENGINEER</title>
-    <meta name="description" content="AI Engineering student at HCMUTE. Machine Learning, Computer Vision, Generative AI. Based in Ho Chi Minh City, Vietnam.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-
-    <style>
-        /* ========================================================
-           DESIGN TOKENS  (Pacman design system)
-        ======================================================== */
-        :root {
-            --c-primary:   #2A3FE5;
-            --c-secondary: #F4B9B0;
-            --c-success:   #16A34A;
-            --c-warning:   #D97706;
-            --c-danger:    #DC2626;
-            --c-surface:   #000000;
-            --c-surface-1: #080808;
-            --c-yellow:    #FFE000;
-            --c-cyan:      #00E5FF;
-            --c-text:      #FFFFFF;
-            --c-text-dim:  #888888;
-
-            --font-pixel: 'Press Start 2P', cursive;
-            --font-mono:  'Space Mono', monospace;
-
-            --sp-xs: 4px;
-            --sp-sm: 8px;
-            --sp-md: 16px;
-            --sp-lg: 32px;
-            --sp-xl: 64px;
-        }
-
-        /* ========================================================
-           RESET & BASE
-        ======================================================== */
-        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-        html {
-            scroll-behavior: smooth;
-            scrollbar-width: thin;
-            scrollbar-color: var(--c-primary) var(--c-surface);
-        }
-
-        ::-webkit-scrollbar       { width: 5px; }
-        ::-webkit-scrollbar-track { background: var(--c-surface); }
-        ::-webkit-scrollbar-thumb { background: var(--c-primary); }
-
-        body {
-            background: var(--c-surface);
-            color: var(--c-text);
-            font-family: var(--font-pixel);
-            overflow-x: hidden;
-        }
-
-        a { color: inherit; text-decoration: none; }
-
-        /* ========================================================
-           NAV
-        ======================================================== */
-        .navbar {
-            position: fixed;
-            top: 0; left: 0; right: 0;
-            z-index: 900;
-            background: rgba(0, 0, 0, 0.97);
-            backdrop-filter: blur(6px);
-        }
-
-        .navbar-inner {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 15px 48px;
-        }
-
-        .nav-logo {
-            font-family: var(--font-pixel);
-            font-size: 0.62rem;
-            color: var(--c-yellow);
-            text-shadow: 0 0 14px rgba(255, 224, 0, 0.55);
-            letter-spacing: 2px;
-        }
-
-        .nav-links {
-            list-style: none;
-            display: flex;
-            gap: 32px;
-        }
-
-        .nav-links a {
-            font-family: var(--font-mono);
-            font-size: 0.62rem;
-            color: var(--c-text-dim);
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            position: relative;
-            padding-bottom: 3px;
-            transition: color 0.2s;
-        }
-
-        .nav-links a::after {
-            content: '';
-            position: absolute;
-            bottom: 0; left: 0; right: 0;
-            height: 2px;
-            background: var(--c-yellow);
-            transform: scaleX(0);
-            transform-origin: left;
-            transition: transform 0.2s;
-        }
-
-        .nav-links a:hover  { color: var(--c-yellow); }
-        .nav-links a:hover::after { transform: scaleX(1); }
-        .nav-links a:focus-visible { outline: 2px solid var(--c-yellow); outline-offset: 4px; }
-
-        /* ── Pac-Man animation strip ── */
-        #nav-canvas {
-            display: block;
-            width: 100%;
-            height: 22px;
-            border-top: 1px dotted rgba(42, 63, 229, 0.4);
-        }
-
-        /* ========================================================
-           HERO  — CRT arcade attract screen
-        ======================================================== */
-        .hero {
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            padding: 116px 32px 80px;
-            text-align: center;
-            position: relative;
-            /* subtle maze grid */
-            background-image:
-                linear-gradient(rgba(42, 63, 229, 0.04) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(42, 63, 229, 0.04) 1px, transparent 1px);
-            background-size: 40px 40px;
-        }
-
-        /* ghost silhouettes — atmosphere, not distraction */
-        .ghost-deco {
-            position: absolute;
-            font-size: 2.4rem;
-            opacity: 0.1;
-            user-select: none;
-            pointer-events: none;
-        }
-
-        .ghost-deco.g1 { top: 17%; left: 6%;   color: var(--c-danger);    animation: ghost-float 6s ease-in-out infinite 0s; }
-        .ghost-deco.g2 { top: 22%; right: 7%;  color: var(--c-secondary); animation: ghost-float 6s ease-in-out infinite 1.5s; }
-        .ghost-deco.g3 { bottom: 20%; left: 9%; color: var(--c-cyan);     animation: ghost-float 6s ease-in-out infinite 3s; }
-        .ghost-deco.g4 { bottom: 27%; right: 6%;color: var(--c-warning);  animation: ghost-float 6s ease-in-out infinite 4.5s; }
-
-        .hero-badge {
-            display: inline-block;
-            font-family: var(--font-mono);
-            font-size: 0.58rem;
-            color: var(--c-success);
-            border: 1px dotted var(--c-success);
-            padding: 6px 22px;
-            letter-spacing: 4px;
-            margin-bottom: 40px;
-            animation: blink 1.4s step-end infinite;
-        }
-
-        .hero-name {
-            font-family: var(--font-pixel);
-            font-size: clamp(1.1rem, 3.2vw, 2.4rem);
-            color: var(--c-yellow);
-            text-shadow:
-                0 0 24px rgba(255, 224, 0, 0.38),
-                5px 5px 0 rgba(180, 120, 0, 0.25);
-            letter-spacing: 6px;
-            line-height: 1.7;
-            margin-bottom: 20px;
-        }
-
-        .hero-role {
-            font-family: var(--font-mono);
-            font-size: clamp(0.48rem, 1.4vw, 0.82rem);
-            color: var(--c-cyan);
-            letter-spacing: 5px;
-            text-transform: uppercase;
-            text-shadow: 0 0 14px rgba(0, 229, 255, 0.38);
-            margin-bottom: 56px;
-        }
-
-        /* HUD stats row */
-        .hero-stats {
-            display: flex;
-            gap: 20px;
-            flex-wrap: wrap;
-            justify-content: center;
-            margin-bottom: 52px;
-        }
-
-        .hud-card {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 8px;
-            padding: 16px 24px;
-            border: 2px dotted var(--c-primary);
-            min-width: 96px;
-        }
-
-        .hud-label {
-            font-family: var(--font-mono);
-            font-size: 0.48rem;
-            color: var(--c-text-dim);
-            letter-spacing: 3px;
-            text-transform: uppercase;
-        }
-
-        .hud-value {
-            font-family: var(--font-pixel);
-            font-size: 0.82rem;
-        }
-
-        /* CTA row */
-        .hero-cta { display: flex; gap: 18px; flex-wrap: wrap; justify-content: center; }
-
-        /* ========================================================
-           BUTTONS
-        ======================================================== */
-        .btn {
-            display: inline-block;
-            font-family: var(--font-pixel);
-            font-size: 0.52rem;
-            letter-spacing: 2px;
-            padding: 14px 28px;
-            cursor: pointer;
-            border: none;
-            transition: transform 0.12s, box-shadow 0.12s;
-        }
-
-        .btn:focus-visible { outline: 3px solid var(--c-yellow); outline-offset: 4px; }
-
-        .btn-filled {
-            background: var(--c-primary);
-            color: #fff;
-            box-shadow: 4px 4px 0 rgba(42, 63, 229, 0.38);
-        }
-
-        .btn-filled:hover {
-            transform: translate(-2px, -2px);
-            box-shadow: 6px 6px 0 rgba(42, 63, 229, 0.5);
-        }
-
-        .btn-outline {
-            background: transparent;
-            color: var(--c-yellow);
-            border: 2px solid var(--c-yellow);
-            box-shadow: 4px 4px 0 rgba(255, 224, 0, 0.18);
-        }
-
-        .btn-outline:hover {
-            background: var(--c-yellow);
-            color: var(--c-surface);
-            transform: translate(-2px, -2px);
-            box-shadow: 6px 6px 0 rgba(255, 224, 0, 0.28);
-        }
-
-        /* ========================================================
-           SECTION WRAPPER  (shared)
-        ======================================================== */
-        .sec {
-            max-width: 1080px;
-            margin: 0 auto;
-            padding: 96px 48px;
-            border-top: 1px dotted rgba(42, 63, 229, 0.22);
-        }
-
-        .sec-eyebrow {
-            display: block;
-            font-family: var(--font-mono);
-            font-size: 0.58rem;
-            color: var(--c-primary);
-            letter-spacing: 5px;
-            text-transform: uppercase;
-            margin-bottom: 10px;
-        }
-
-        .sec-heading {
-            font-family: var(--font-pixel);
-            font-size: clamp(0.88rem, 1.9vw, 1.25rem);
-            color: var(--c-text);
-            margin-bottom: 48px;
-            padding-bottom: 14px;
-            border-bottom: 3px dotted var(--c-primary);
-            display: inline-block;
-        }
-
-        /* ========================================================
-           ABOUT
-        ======================================================== */
-        .about-grid {
-            display: grid;
-            grid-template-columns: 1.4fr 1fr;
-            gap: 64px;
-            align-items: start;
-        }
-
-        .about-body p {
-            font-family: var(--font-mono);
-            font-size: 0.7rem;
-            color: #bfbfbf;
-            line-height: 2.3;
-            margin-bottom: 18px;
-        }
-
-        .about-motto {
-            font-family: var(--font-mono);
-            font-size: 0.6rem;
-            color: var(--c-text-dim);
-            font-style: italic;
-            line-height: 2;
-        }
-
-        .quote-box {
-            margin-top: 28px;
-            padding: 22px 22px 22px 28px;
-            background: rgba(42, 63, 229, 0.07);
-            border-left: 4px solid var(--c-primary);
-        }
-
-        .quote-box p {
-            font-family: var(--font-mono);
-            font-size: 0.62rem;
-            color: #888;
-            line-height: 2.4;
-            font-style: italic;
-        }
-
-        .quote-attr {
-            display: block;
-            font-family: var(--font-mono);
-            font-size: 0.5rem;
-            color: var(--c-text-dim);
-            letter-spacing: 2px;
-            margin-top: 10px;
-            text-align: right;
-        }
-
-        /* Player stats card */
-        .player-card {
-            padding: 26px;
-            border: 2px dotted var(--c-primary);
-            background: var(--c-surface-1);
-        }
-
-        .player-card-title {
-            font-family: var(--font-pixel);
-            font-size: 0.52rem;
-            color: var(--c-yellow);
-            letter-spacing: 3px;
-            margin-bottom: 20px;
-            text-align: center;
-        }
-
-        .player-row {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-family: var(--font-mono);
-            font-size: 0.6rem;
-            color: var(--c-text-dim);
-            line-height: 1;
-            padding: 8px 0;
-            border-bottom: 1px dotted rgba(42, 63, 229, 0.15);
-        }
-
-        .player-row:last-of-type { border-bottom: none; }
-
-        .player-row span:last-child { color: var(--c-text); }
-
-        .hp-row {
-            margin-top: 18px;
-            padding-top: 16px;
-            border-top: 1px dotted rgba(42, 63, 229, 0.3);
-        }
-
-        .hp-label {
-            font-family: var(--font-mono);
-            font-size: 0.52rem;
-            color: var(--c-text-dim);
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            margin-bottom: 8px;
-        }
-
-        .hp-label span { color: var(--c-success); }
-
-        .hp-track {
-            width: 100%;
-            height: 8px;
-            background: rgba(255, 255, 255, 0.08);
-        }
-
-        .hp-fill {
-            height: 100%;
-            width: 80%;
-            background: var(--c-success);
-        }
-
-        /* ========================================================
-           SKILLS  — "power-ups" section
-        ======================================================== */
-        .skill-category { margin-bottom: 36px; }
-
-        .skill-cat-label {
-            font-family: var(--font-mono);
-            font-size: 0.52rem;
-            color: var(--c-text-dim);
-            letter-spacing: 4px;
-            text-transform: uppercase;
-            margin-bottom: 14px;
-            padding-left: 12px;
-            border-left: 3px solid var(--c-warning);
-        }
-
-        .skill-grid { display: flex; flex-wrap: wrap; gap: 9px; }
-
-        /* maze-wall dotted border via border-image */
-        .skill-pellet {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            padding: 10px 16px;
-            background: var(--c-surface-1);
-            border: 1px solid transparent;
-            border-image:
-                repeating-linear-gradient(
-                    90deg,
-                    var(--c-primary) 0, var(--c-primary) 6px,
-                    transparent 6px, transparent 14px
-                ) 1;
-            font-family: var(--font-mono);
-            font-size: 0.6rem;
-            color: var(--c-text);
-            transition: background 0.18s, color 0.18s, box-shadow 0.18s;
-            cursor: default;
-        }
-
-        .skill-pellet::before {
-            content: '●';
-            font-size: 0.42rem;
-            color: var(--c-yellow);
-        }
-
-        .skill-pellet:hover {
-            background: rgba(42, 63, 229, 0.16);
-            color: var(--c-yellow);
-            box-shadow: 0 0 10px rgba(255, 224, 0, 0.12);
-        }
-
-        /* ========================================================
-           GITHUB STATS
-        ======================================================== */
-        .stats-frames {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 28px;
-        }
-
-        .stat-frame {
-            position: relative;
-            padding: 28px;
-            border: 2px dotted var(--c-primary);
-            width: 100%;
-            max-width: 560px;
-        }
-
-        .stat-frame::before {
-            content: attr(data-label);
-            position: absolute;
-            top: -11px;
-            left: 20px;
-            background: var(--c-surface);
-            padding: 0 10px;
-            font-family: var(--font-mono);
-            font-size: 0.48rem;
-            color: var(--c-primary);
-            letter-spacing: 4px;
-        }
-
-        .stat-frame img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-
-        /* ========================================================
-           CONTACT
-        ======================================================== */
-        .contact-center { text-align: center; }
-
-        .contact-tagline {
-            font-family: var(--font-mono);
-            font-size: 0.66rem;
-            color: var(--c-text-dim);
-            line-height: 2.7;
-            margin-bottom: 44px;
-            max-width: 520px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .contact-links { display: flex; gap: 18px; justify-content: center; flex-wrap: wrap; }
-
-        .dot-pulse {
-            display: flex;
-            gap: 14px;
-            justify-content: center;
-            margin-top: 52px;
-        }
-
-        .dot-pulse span {
-            display: block;
-            width: 10px;
-            height: 10px;
-            border-radius: 50%;
-            background: var(--c-yellow);
-            animation: pulse-dot 1.4s ease-in-out infinite;
-        }
-
-        .dot-pulse span:nth-child(2) { animation-delay: 0.2s; }
-        .dot-pulse span:nth-child(3) { animation-delay: 0.4s; }
-        .dot-pulse span:nth-child(4) { animation-delay: 0.6s; }
-        .dot-pulse span:nth-child(5) { animation-delay: 0.8s; }
-
-        /* ========================================================
-           FOOTER
-        ======================================================== */
-        footer {
-            border-top: 2px dotted rgba(42, 63, 229, 0.25);
-            padding: 22px 48px;
-            text-align: center;
-        }
-
-        footer p {
-            font-family: var(--font-mono);
-            font-size: 0.5rem;
-            color: var(--c-text-dim);
-            letter-spacing: 2px;
-        }
-
-        /* ========================================================
-           KEYFRAMES
-        ======================================================== */
-        @keyframes blink {
-            0%, 100% { opacity: 1; }
-            50%       { opacity: 0.2; }
-        }
-
-        @keyframes ghost-float {
-            0%, 100% { transform: translateY(0)    rotate(-2deg); }
-            50%       { transform: translateY(-22px) rotate(2deg); }
-        }
-
-        @keyframes pulse-dot {
-            0%, 100% { transform: scale(1);   opacity: 0.4; }
-            50%       { transform: scale(1.5); opacity: 1; }
-        }
-
-        /* ========================================================
-           SCROLL REVEAL
-        ======================================================== */
-        .reveal {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.55s ease, transform 0.55s ease;
-        }
-        .reveal.visible { opacity: 1; transform: none; }
-
-        /* ========================================================
-           RESPONSIVE
-        ======================================================== */
-        @media (max-width: 768px) {
-            .navbar-inner { padding: 14px 22px; }
-            .nav-links { gap: 18px; }
-            .sec { padding: 64px 22px; }
-            .about-grid { grid-template-columns: 1fr; gap: 40px; }
-            .hero-name { font-size: 1.1rem; letter-spacing: 3px; }
-        }
-
-        @media (max-width: 480px) {
-            .nav-links { display: none; }
-        }
-
-        /* Respect prefers-reduced-motion */
-        @media (prefers-reduced-motion: reduce) {
-            *, *::before, *::after {
-                animation-duration: 0.01ms !important;
-                transition-duration: 0.01ms !important;
-            }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Bui Tran Tan Phat - AI Engineering Intern focused on GenAI, Computer Vision, and Vision-Language Models.">
+  <title>Bui Tran Tan Phat | AI Engineering Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #0b0b0b;
+      --secondary: #6d6d6d;
+      --accent: #cdff48;
+      --neutral: #f5f3ee;
+      --surface: #ffffff;
+      --line: rgba(11, 11, 11, 0.18);
+      --max: 1180px;
+      --radius-sm: 2px;
+      --radius-md: 4px;
+      --radius-lg: 6px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--neutral);
+      color: var(--primary);
+      font-family: "JetBrains Mono", Consolas, "Courier New", monospace;
+      font-size: 0.92rem;
+      line-height: 1.5;
+      letter-spacing: 0;
+      cursor: none;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    a:focus-visible,
+    button:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 4px;
+    }
+
+    .cursor {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+      width: 14px;
+      height: 14px;
+      pointer-events: none;
+      background: var(--accent);
+      border: 1px solid var(--primary);
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+      mix-blend-mode: multiply;
+    }
+
+    .page {
+      min-height: 100vh;
+    }
+
+    .shell {
+      width: min(100% - 32px, var(--max));
+      margin: 0 auto;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(245, 243, 238, 0.92);
+      border-bottom: 1px solid var(--line);
+      backdrop-filter: blur(14px);
+    }
+
+    .nav {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 24px;
+      align-items: center;
+      min-height: 72px;
+    }
+
+    .mark {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+
+    .mark::before {
+      content: "";
+      width: 12px;
+      height: 12px;
+      background: var(--primary);
+      border-radius: var(--radius-sm);
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 18px;
+      color: var(--secondary);
+      font-size: 0.76rem;
+      text-transform: uppercase;
+    }
+
+    .nav-links a:hover {
+      color: var(--primary);
+    }
+
+    .hero {
+      min-height: calc(100vh - 72px);
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 300px;
+      gap: 56px;
+      align-items: end;
+      padding: 72px 0 40px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .eyebrow {
+      margin: 0 0 18px;
+      color: var(--secondary);
+      font-size: 0.7rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    h1,
+    h2,
+    h3,
+    p {
+      margin-top: 0;
+    }
+
+    .hero h1 {
+      max-width: 950px;
+      margin-bottom: 28px;
+      font-size: clamp(2.5rem, 6vw, 4rem);
+      font-weight: 500;
+      line-height: 1.02;
+      letter-spacing: 0;
+      text-transform: uppercase;
+    }
+
+    .hero-copy {
+      max-width: 790px;
+      margin-bottom: 32px;
+      color: var(--secondary);
+      font-size: 1rem;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      align-items: center;
+    }
+
+    .button-primary {
+      display: inline-flex;
+      align-items: center;
+      min-height: 46px;
+      padding: 12px 20px;
+      background: var(--accent);
+      color: var(--primary);
+      border: 1px solid var(--primary);
+      border-radius: var(--radius-md);
+      font-weight: 700;
+      text-transform: uppercase;
+      box-shadow: 5px 5px 0 var(--primary);
+    }
+
+    .button-primary:hover {
+      transform: translate(2px, 2px);
+      box-shadow: 3px 3px 0 var(--primary);
+    }
+
+    .text-link {
+      color: var(--secondary);
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      border-bottom: 1px solid currentColor;
+    }
+
+    .text-link:hover {
+      color: var(--primary);
+    }
+
+    .hero-panel {
+      align-self: stretch;
+      display: grid;
+      align-content: end;
+      gap: 18px;
+      min-height: 460px;
+      border-left: 1px solid var(--line);
+      padding-left: 24px;
+    }
+
+    .hero-meta {
+      display: grid;
+      gap: 0;
+      border-top: 1px solid var(--primary);
+      color: var(--primary);
+      font-size: 0.78rem;
+      text-transform: uppercase;
+    }
+
+    .hero-meta span {
+      display: grid;
+      grid-template-columns: 92px minmax(0, 1fr);
+      gap: 16px;
+      padding: 14px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .hero-meta strong {
+      color: var(--secondary);
+      font-weight: 500;
+    }
+
+    section {
+      padding: 72px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .section-grid {
+      display: grid;
+      grid-template-columns: 240px minmax(0, 1fr);
+      gap: 48px;
+    }
+
+    .section-title {
+      margin: 0;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .section-title::before {
+      content: "/";
+      display: block;
+      margin-bottom: 8px;
+      color: var(--secondary);
+    }
+
+    .lead {
+      max-width: 880px;
+      margin-bottom: 0;
+      font-size: clamp(1.15rem, 2.2vw, 2rem);
+      font-weight: 500;
+      line-height: 1.25;
+    }
+
+    .project-list {
+      display: grid;
+      gap: 0;
+      border-top: 1px solid var(--primary);
+    }
+
+    .project {
+      display: grid;
+      grid-template-columns: minmax(0, 320px) minmax(0, 1fr);
+      gap: 32px;
+      padding: 28px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .project h3 {
+      margin-bottom: 10px;
+      font-size: 1rem;
+      font-weight: 600;
+      line-height: 1.35;
+    }
+
+    .project p {
+      margin-bottom: 12px;
+      color: var(--secondary);
+    }
+
+    .project p:last-child {
+      margin-bottom: 0;
+    }
+
+    .metric {
+      display: inline-block;
+      margin-top: 6px;
+      padding: 5px 8px;
+      border: 1px solid var(--primary);
+      border-radius: var(--radius-sm);
+      color: var(--primary);
+      font-size: 0.72rem;
+      font-weight: 600;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 24px;
+    }
+
+    .skill-group {
+      min-height: 168px;
+      padding: 24px;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+    }
+
+    .skill-group h3 {
+      margin-bottom: 18px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .tag {
+      padding: 7px 9px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-sm);
+      color: var(--secondary);
+      font-size: 0.76rem;
+      background: var(--neutral);
+    }
+
+    .education {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 32px;
+      padding: 28px 0;
+      border-top: 1px solid var(--primary);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .education h3 {
+      margin-bottom: 8px;
+      font-size: 1rem;
+    }
+
+    .education p,
+    .education-meta {
+      margin: 0;
+      color: var(--secondary);
+    }
+
+    .education-meta {
+      display: grid;
+      gap: 8px;
+      justify-items: end;
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .contact-link {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 72px;
+      padding: 18px 20px;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      color: var(--primary);
+    }
+
+    .contact-link span {
+      color: var(--secondary);
+      font-size: 0.7rem;
+      text-transform: uppercase;
+    }
+
+    .contact-link:hover {
+      border-color: var(--primary);
+    }
+
+    footer {
+      padding: 28px 0 40px;
+      color: var(--secondary);
+      font-size: 0.72rem;
+      text-transform: uppercase;
+    }
+
+    @media (max-width: 860px) {
+      body {
+        cursor: auto;
+      }
+
+      .cursor {
+        display: none;
+      }
+
+      .nav {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        padding: 16px 0;
+      }
+
+      .nav-links {
+        justify-content: flex-start;
+      }
+
+      .hero {
+        min-height: auto;
+        grid-template-columns: 1fr;
+        gap: 40px;
+        padding-top: 56px;
+      }
+
+      .hero-panel {
+        min-height: auto;
+        border-left: 0;
+        border-top: 1px solid var(--line);
+        padding: 28px 0 0;
+      }
+
+      .signal {
+        max-width: 220px;
+      }
+
+      .section-grid,
+      .project,
+      .education,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .section-grid {
+        gap: 28px;
+      }
+
+      .skills-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .education-meta {
+        justify-items: start;
+        white-space: normal;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .shell {
+        width: min(100% - 24px, var(--max));
+      }
+
+      .nav-links {
+        gap: 12px;
+      }
+
+      .hero h1 {
+        font-size: 2.45rem;
+      }
+
+      .actions {
+        align-items: stretch;
+        flex-direction: column;
+      }
+
+      .button-primary,
+      .text-link {
+        width: fit-content;
+      }
+
+      section {
+        padding: 56px 0;
+      }
+    }
+  </style>
 </head>
 <body>
-
-<!-- ============================================================
-     NAVBAR
-============================================================ -->
-<header class="navbar" role="banner">
-    <div class="navbar-inner">
-        <span class="nav-logo" aria-label="Flynn's site">◉ FLYNN.EXE</span>
-        <nav aria-label="Main">
-            <ul class="nav-links" role="list">
-                <li><a href="#about">ABOUT</a></li>
-                <li><a href="#skills">SKILLS</a></li>
-                <li><a href="#stats">STATS</a></li>
-                <li><a href="#contact">CONTACT</a></li>
-            </ul>
-        </nav>
-    </div>
-    <!-- SIGNATURE ELEMENT: Pac-Man dot trail -->
-    <canvas id="nav-canvas" aria-hidden="true"></canvas>
-</header>
-
-
-<!-- ============================================================
-     HERO  — attract screen
-============================================================ -->
-<section class="hero" id="home" aria-label="Introduction">
-    <span class="ghost-deco g1" aria-hidden="true">👻</span>
-    <span class="ghost-deco g2" aria-hidden="true">👻</span>
-    <span class="ghost-deco g3" aria-hidden="true">👻</span>
-    <span class="ghost-deco g4" aria-hidden="true">👻</span>
-
-    <div class="hero-badge" role="status">▶&nbsp; PLAYER 1 READY &nbsp;◀</div>
-
-    <h1 class="hero-name">BUI TRAN TAN PHAT</h1>
-    <p class="hero-role">AI&nbsp;ENGINEERING&nbsp;&nbsp;·&nbsp;&nbsp;HCMUTE</p>
-
-    <div class="hero-stats" role="list" aria-label="Profile summary">
-        <div class="hud-card" role="listitem">
-            <span class="hud-label">GPA</span>
-            <span class="hud-value" style="color:var(--c-success)">3.21</span>
+  <div class="cursor" aria-hidden="true"></div>
+  <div class="page">
+    <header class="topbar">
+      <nav class="shell nav" aria-label="Primary navigation">
+        <a class="mark" href="#top">Bui Tran Tan Phat</a>
+        <div class="nav-links">
+          <a href="#projects">Projects</a>
+          <a href="#skills">Skills</a>
+          <a href="#education">Education</a>
+          <a href="#contact">Contact</a>
         </div>
-        <div class="hud-card" role="listitem">
-            <span class="hud-label">BASE</span>
-            <span class="hud-value" style="color:var(--c-cyan);font-size:0.58rem">HCMC&nbsp;VN</span>
-        </div>
-        <div class="hud-card" role="listitem">
-            <span class="hud-label">FOCUS</span>
-            <span class="hud-value" style="color:var(--c-secondary);font-size:0.58rem">CV&nbsp;+&nbsp;DL</span>
-        </div>
-    </div>
+      </nav>
+    </header>
 
-    <div class="hero-cta">
-        <a href="https://github.com/FlynnBui399"
-           target="_blank" rel="noopener noreferrer"
-           class="btn btn-filled"
-           aria-label="Open GitHub profile">⬡&nbsp;GITHUB</a>
-        <a href="#about" class="btn btn-outline">▼&nbsp;ENTER</a>
-    </div>
-</section>
-
-
-<!-- ============================================================
-     ABOUT
-============================================================ -->
-<article class="sec reveal" id="about">
-    <span class="sec-eyebrow">// ABOUT</span>
-    <h2 class="sec-heading">PLAYER ONE</h2>
-
-    <div class="about-grid">
-        <!-- Text column -->
-        <div class="about-body">
-            <p>
-                AI Engineering student at HCMUTE, concentrating in
-                Machine Learning and Computer Vision. Building intelligent
-                visual applications that bridge research and real-world use.
-            </p>
-            <p>
-                Driven by deep curiosity — from classical algorithms to
-                generative AI — and motivated by the belief that technology
-                should genuinely augment human capability.
-            </p>
-            <p class="about-motto">"Hope for the best, but prepare for the worst."</p>
-
-            <div class="quote-box">
-                <p>
-                    Some people call this artificial intelligence, but the reality
-                    is this technology will enhance us. Instead of artificial
-                    intelligence, I think we'll augment our intelligence.
-                </p>
-                <span class="quote-attr">— SATYA NADELLA</span>
-            </div>
-        </div>
-
-        <!-- Stats card column -->
+    <main id="top">
+      <section class="shell hero" aria-labelledby="hero-title">
         <div>
-            <div class="player-card">
-                <div class="player-card-title">◉ PLAYER STATS</div>
-                <div class="player-row">
-                    <span>NAME</span><span>FLYNN BUI</span>
-                </div>
-                <div class="player-row">
-                    <span>CLASS</span><span>AI ENGINEER</span>
-                </div>
-                <div class="player-row">
-                    <span>SCHOOL</span><span>HCMUTE</span>
-                </div>
-                <div class="player-row">
-                    <span>GPA</span>
-                    <span style="color:var(--c-success)">3.21 / 4.0</span>
-                </div>
-                <div class="player-row">
-                    <span>BASE</span><span>HCMC, VN</span>
-                </div>
-                <div class="hp-row">
-                    <div class="hp-label">
-                        HP &nbsp;<span>80%</span>
-                    </div>
-                    <div class="hp-track">
-                        <div class="hp-fill"></div>
-                    </div>
-                </div>
+          <p class="eyebrow">AI Engineering Intern / GenAI & Vision-Language Models</p>
+          <h1 id="hero-title">BUI TRAN TAN PHAT</h1>
+          <p class="hero-copy">
+            AI Engineering Intern building practical systems across vision, retrieval, and multimodal workflows.
+            Highly motivated AI Engineering student with a foundation in Computer Vision and Machine Learning,
+            expanding into Generative AI and Vision-Language Models.
+          </p>
+          <div class="actions">
+            <a class="button-primary" href="https://drive.google.com/file/d/1f-Tzq4Gf3tjbJzE9TCl7AdQCL_Hcrz8P/view?usp=sharing" target="_blank" rel="noopener">Open Resume</a>
+            <a class="text-link" href="https://github.com/FlynnBui399" target="_blank" rel="noopener">Github.com/FlynnBui399</a>
+          </div>
+        </div>
+
+        <aside class="hero-panel" aria-label="Portfolio signal">
+          <div class="hero-meta">
+            <span><strong>Role</strong> AI Engineering Intern</span>
+            <span><strong>Focus</strong> GenAI / Vision-Language Models</span>
+            <span><strong>Core</strong> Computer Vision / Machine Learning</span>
+            <span><strong>School</strong> HCMUTE / Information Technology</span>
+            <span><strong>Grad</strong> August 2027</span>
+          </div>
+        </aside>
+      </section>
+
+      <section id="objective">
+        <div class="shell section-grid">
+            <h2 class="section-title" style="font-size: 1.5rem;">Objective Career</h2>
+          <p class="lead" style="font-size: 1.25rem;">
+            AI Engineering Intern building practical systems across vision, retrieval, and multimodal workflows.
+            Highly motivated AI Engineering student with a foundation in Computer Vision and Machine Learning,
+            expanding into Generative AI and Vision-Language Models.
+          </p>
+        </div>
+      </section>
+
+      <section id="projects">
+        <div class="shell section-grid">
+          <h2 class="section-title" style="font-size: 1.5rem;">Projects</h2>
+          <div class="project-list">
+            <article class="project">
+              <div>
+                <h3>Skin-Lesion Classification on HAM10000</h3>
+                <span class="metric">Accuracy 0.807 / OvR ROC-AUC 0.946</span>
+              </div>
+              <div>
+                <p>
+                  Engineered and integrated ~30 handcrafted visual features with clinical patient metadata to
+                  construct comprehensive training matrices
+                </p>
+                <p>
+                  Trained and fine-tuned LightGBM classifiers with randomized search for severely imbalanced
+                  medical-image data.
+                </p>
+              </div>
+            </article>
+
+            <article class="project">
+              <div>
+                <h3>High-Resolution Retinal Vessel Segmentation (Role: Literature Review)</h3>
+                <span class="metric">Accuracy 0.964 / Dice 0.771</span>
+              </div>
+              <div>
+                <p>
+                  Developed a hybrid retinal blood-vessel segmentation model using a UNet++ decoder with an
+                  EfficientNet-B4 encoder, optimized for high-resolution medical imagery.
+                </p>
+                <p>
+                  Applied advanced data augmentation and validated results with Dice, IoU, Sensitivity, and
+                  Accuracy on the HRF dataset, with emphasis on micro-vessels often missed by traditional methods.
+                </p>
+              </div>
+            </article>
+
+            <article class="project">
+              <div>
+                <h3>Simple RAG System (Role: Implementation)</h3>
+                <span class="metric">LLM API + local deployment</span>
+              </div>
+              <div>
+                <p>
+                  Built a RAG system for an intelligent question-answering system
+                  serving the HCMUTE IT Department in my university.
+                </p>
+                <p>
+                  Integrated LLMs through DeepSeek API access and local deployment to synthesize answers about
+                  admissions, faculty details, and academic programs.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="skills">
+        <div class="shell section-grid">
+          <h2 class="section-title" style="font-size: 1.5rem;">Skills</h2>
+          <div class="skills-grid">
+            <div class="skill-group">
+              <h3>Technical Stack</h3>
+              <div class="tags">
+                <span class="tag">Python</span>
+                <span class="tag">PyTorch</span>
+                <span class="tag">MySQL</span>
+                <span class="tag">ChromaDB</span>
+                <span class="tag">OpenCV</span>
+                <span class="tag">NumPy</span>
+                <span class="tag">Pandas</span>
+                <span class="tag">Matplotlib</span>
+                <span class="tag">Seaborn</span>
+              </div>
             </div>
+
+            <div class="skill-group">
+              <h3>Working Style</h3>
+              <div class="tags">
+                <span class="tag">Teamwork</span>
+                <span class="tag">Time Management</span>
+                <span class="tag">Critical Thinking</span>
+                <span class="tag">Self-learning</span>
+                <span class="tag">Research Paper Reading</span>
+              </div>
+            </div>
+          </div>
         </div>
-    </div>
-</article>
+      </section>
 
-
-<!-- ============================================================
-     SKILLS
-============================================================ -->
-<article class="sec reveal" id="skills">
-    <span class="sec-eyebrow">// POWER-UPS</span>
-    <h2 class="sec-heading">TECH STACK</h2>
-
-    <div class="skill-category">
-        <div class="skill-cat-label">Languages</div>
-        <div class="skill-grid">
-            <div class="skill-pellet">Python</div>
-            <div class="skill-pellet">C++</div>
-            <div class="skill-pellet">C#</div>
+      <section id="education">
+        <div class="shell section-grid">
+          <h2 class="section-title" style="font-size: 1.5rem;">Education</h2>
+          <div class="education">
+            <div>
+              <h3>HCMC University of Technology and Engineering - HCMUTE</h3>
+              <p>B.E. in Information Technology, specialization in Artificial Intelligence.</p>
+            </div>
+            <div class="education-meta">
+              <span>GPA 3.42 / 4.0</span>
+              <span>Expected August 2027</span>
+            </div>
+          </div>
         </div>
-    </div>
+      </section>
 
-    <div class="skill-category">
-        <div class="skill-cat-label">Machine Learning / AI</div>
-        <div class="skill-grid">
-            <div class="skill-pellet">PyTorch</div>
-            <div class="skill-pellet">OpenCV</div>
+      <section id="contact">
+        <div class="shell section-grid">
+          <h2 class="section-title" style="font-size: 1.5rem;">Contact</h2>
+          <div class="contact-grid">
+            <a class="contact-link" href="https://github.com/FlynnBui399" target="_blank" rel="noopener">
+              Github.com/FlynnBui399
+              <span>Repository</span>
+            </a>
+            <a class="contact-link" href="http://www.linkedin.com/in/phatbtt-flynn-ai" target="_blank" rel="noopener">
+              LinkedIn / phatbtt-flynn-ai
+              <span>Profile</span>
+            </a>
+            <a class="contact-link" href="mailto:buiphat251399@gmail.com">
+              buiphat251399@gmail.com
+              <span>Email</span>
+            </a>
+            <a class="contact-link" href="tel:+84 907251399">
+              (+84) 907.25.1399
+              <span>Phone</span>
+            </a>
+          </div>
         </div>
-    </div>
+      </section>
+    </main>
 
-    <div class="skill-category">
-        <div class="skill-cat-label">Data Science</div>
-        <div class="skill-grid">
-            <div class="skill-pellet">Pandas</div>
-            <div class="skill-pellet">NumPy</div>
-            <div class="skill-pellet">Matplotlib</div>
-        </div>
-    </div>
+    <footer>
+      <div class="shell">Bui Tran Tan Phat / AI Engineering Intern / GenAI & Vision-Language Models</div>
+    </footer>
+  </div>
 
-    <div class="skill-category">
-        <div class="skill-cat-label">Databases</div>
-        <div class="skill-grid">
-            <div class="skill-pellet">MySQL</div>
-            <div class="skill-pellet">PostgreSQL</div>
-        </div>
-    </div>
-</article>
+  <script>
+    const cursor = document.querySelector(".cursor");
 
-
-<!-- ============================================================
-     GITHUB STATS
-============================================================ -->
-<article class="sec reveal" id="stats">
-    <span class="sec-eyebrow">// HIGH SCORES</span>
-    <h2 class="sec-heading">GITHUB STATS</h2>
-
-    <div class="stats-frames">
-        <div class="stat-frame" data-label="STREAK">
-            <img
-                src="https://streak-stats.demolab.com/?user=FlynnBui399&theme=dark&background=080808&border=2A3FE5&stroke=2A3FE5&ring=FFE000&fire=FFE000&currStreakLabel=FFE000&sideLabels=AAAAAA&dates=555555"
-                alt="GitHub contribution streak for FlynnBui399"
-                loading="lazy"
-            />
-        </div>
-        <div class="stat-frame" data-label="OVERVIEW">
-            <img
-                src="https://github-readme-stats.vercel.app/api?username=FlynnBui399&show_icons=true&theme=dark&bg_color=080808&border_color=2A3FE5&title_color=FFE000&icon_color=2A3FE5&text_color=CCCCCC"
-                alt="GitHub repository overview for FlynnBui399"
-                loading="lazy"
-            />
-        </div>
-    </div>
-</article>
-
-
-<!-- ============================================================
-     CONTACT
-============================================================ -->
-<article class="sec reveal contact-center" id="contact">
-    <span class="sec-eyebrow">// CONTINUE?</span>
-    <h2 class="sec-heading" style="display:block;text-align:center;border-bottom:none;margin-bottom:20px;">
-        LET'S BUILD TOGETHER
-    </h2>
-
-    <p class="contact-tagline">
-        Open to research collaborations, internship opportunities,<br>
-        and interesting problems in AI and Computer Vision.<br>
-        Based in Ho Chi Minh City, Vietnam.
-    </p>
-
-    <div class="contact-links">
-        <a href="https://github.com/FlynnBui399"
-           target="_blank" rel="noopener noreferrer"
-           class="btn btn-filled"
-           aria-label="Visit GitHub profile">⬡&nbsp;VIEW GITHUB</a>
-    </div>
-
-    <div class="dot-pulse" aria-hidden="true">
-        <span></span><span></span><span></span><span></span><span></span>
-    </div>
-</article>
-
-
-<!-- ============================================================
-     FOOTER
-============================================================ -->
-<footer>
-    <p>© 2024&nbsp;&nbsp;BUI TRAN TAN PHAT&nbsp;&nbsp;—&nbsp;&nbsp;CRAFTED IN HCMC, VIETNAM&nbsp;&nbsp;●</p>
-</footer>
-
-
-<!-- ============================================================
-     SCRIPTS
-============================================================ -->
-<script>
-/* ── Pac-Man canvas animation ── */
-(function () {
-    const canvas = document.getElementById('nav-canvas');
-    if (!canvas) return;
-    const ctx = canvas.getContext('2d');
-
-    const DOT_R      = 2.4;
-    const DOT_SPACE  = 22;
-    const PAC_R      = 8;
-    const PAC_SPEED  = 1.6;
-
-    let dots  = [];
-    let pacX  = -PAC_R;
-    let mouth = 0.18;
-    let dir   = 1;
-    let raf;
-
-    function resize() {
-        canvas.width = canvas.offsetWidth;
-        canvas.height = 22;
-        buildDots();
+    if (cursor && window.matchMedia("(pointer: fine)").matches) {
+      window.addEventListener("mousemove", (event) => {
+        cursor.style.transform = `translate(${event.clientX - 7}px, ${event.clientY - 7}px)`;
+      });
     }
-
-    function buildDots() {
-        dots = [];
-        for (let x = DOT_SPACE; x < canvas.width; x += DOT_SPACE) {
-            dots.push({ x, alive: true });
-        }
-    }
-
-    function frame() {
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-        const cy = canvas.height / 2;
-
-        /* draw living dots */
-        ctx.fillStyle = '#2A3FE5';
-        dots.forEach(d => {
-            if (!d.alive) return;
-            ctx.beginPath();
-            ctx.arc(d.x, cy, DOT_R, 0, Math.PI * 2);
-            ctx.fill();
-        });
-
-        /* eat dots under Pac-Man */
-        dots.forEach(d => {
-            if (d.alive && Math.abs(d.x - pacX) <= PAC_R + DOT_R) d.alive = false;
-        });
-
-        /* animate mouth */
-        mouth += 0.11 * dir;
-        if (mouth > 0.44 || mouth < 0.02) dir *= -1;
-
-        /* draw Pac-Man */
-        ctx.beginPath();
-        ctx.moveTo(pacX, cy);
-        ctx.arc(pacX, cy, PAC_R, mouth, Math.PI * 2 - mouth);
-        ctx.closePath();
-        ctx.fillStyle = '#FFE000';
-        ctx.fill();
-
-        /* advance */
-        pacX += PAC_SPEED;
-        if (pacX > canvas.width + PAC_R) {
-            pacX = -PAC_R;
-            buildDots();
-        }
-
-        raf = requestAnimationFrame(frame);
-    }
-
-    resize();
-    window.addEventListener('resize', () => { cancelAnimationFrame(raf); resize(); raf = requestAnimationFrame(frame); });
-
-    /* respect reduced-motion */
-    const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    if (!prefersReduced) requestAnimationFrame(frame);
-})();
-
-
-/* ── Scroll reveal ── */
-(function () {
-    const obs = new IntersectionObserver(
-        entries => entries.forEach(e => {
-            if (e.isIntersecting) {
-                e.target.classList.add('visible');
-                obs.unobserve(e.target);
-            }
-        }),
-        { threshold: 0.07 }
-    );
-    document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
-})();
-</script>
-
+  </script>
 </body>
 </html>
