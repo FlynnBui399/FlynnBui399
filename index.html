@@ -1,10 +1,201 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>My GitHub Pages Site</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bui Tran Tan Phat | AI Engineer - GenAI</title>
+    <style>
+        :root {
+            --bg-color: #0d1117;
+            --text-color: #c9d1d9;
+            --heading-color: #58a6ff;
+            --card-bg: #161b22;
+            --border-color: #30363d;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .cover-image {
+            width: 100%;
+            max-width: 800px;
+            border-radius: 10px;
+            border: 1px solid var(--border-color);
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            color: #ffffff;
+            font-size: 2.5rem;
+            margin-bottom: 5px;
+        }
+
+        h2 {
+            color: var(--heading-color);
+            font-size: 1.2rem;
+            font-weight: 400;
+            margin-bottom: 20px;
+        }
+
+        section {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            padding: 30px;
+            margin-bottom: 20px;
+        }
+
+        h3 {
+            color: #ffffff;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+        }
+
+        ul {
+            list-style-type: none;
+        }
+
+        ul li {
+            margin-bottom: 12px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        ul li::before {
+            content: "▹";
+            position: absolute;
+            left: 0;
+            color: var(--heading-color);
+        }
+
+        blockquote {
+            border-left: 4px solid var(--heading-color);
+            padding-left: 15px;
+            color: #8b949e;
+            font-style: italic;
+            margin-top: 20px;
+            background: rgba(88, 166, 255, 0.1);
+            padding: 15px;
+            border-radius: 0 5px 5px 0;
+        }
+
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        .tech-stack img {
+            border-radius: 5px;
+            transition: transform 0.2s ease;
+        }
+
+        .tech-stack img:hover {
+            transform: translateY(-3px);
+        }
+
+        .stats-container {
+            text-align: center;
+        }
+
+        .stats-container img {
+            max-width: 100%;
+            border-radius: 8px;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-color);
+            color: #8b949e;
+        }
+
+        .visit-count {
+            margin-top: 15px;
+        }
+    </style>
 </head>
 <body>
-  <h1>Hello, World!</h1>
-  <p>Welcome to my new website.</p>
+
+    <div class="container">
+        <header>
+            <img src="https://github.com/FlynnBui399/FlynnBui399/blob/main/profile_gif/cover_github.jpeg?raw=true" alt="Bui Tran Tan Phat Cover" class="cover-image" />
+            <h1>Bui Tran Tan Phat</h1>
+            <h2>AI Engineer - GenAI | HCMUTE</h2>
+        </header>
+
+        <section id="about">
+            <h3>About Me</h3>
+            <ul>
+                <li>Junior at HCMUTE majoring in Artificial Intelligence.</li>
+                <li>Interested in Machine Learning, Computer Vision | GPA: 3.21/4.0</li>
+                <li>Exploring computer vision, deep learning, and generative AI to build intelligent visual applications.</li>
+                <li>"Hope for the best, but prepare for the worst"</li>
+            </ul>
+            <blockquote>
+                "Some people call this artificial intelligence, but the reality is this technology will enhance us. So, instead of artificial intelligence, I think we’ll augment our intelligence."
+            </blockquote>
+        </section>
+
+        <section id="tech-stack">
+            <h3>Tech Stack</h3>
+            <div class="tech-stack">
+                <img src="https://img.shields.io/badge/c++-%2300599C.svg?style=for-the-badge&logo=c%2B%2B&logoColor=white" alt="C++">
+                <img src="https://img.shields.io/badge/c%23-%23239120.svg?style=for-the-badge&logo=csharp&logoColor=white" alt="C#">
+                <img src="https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54" alt="Python">
+                <img src="https://img.shields.io/badge/opencv-%23white.svg?style=for-the-badge&logo=opencv&logoColor=white" alt="OpenCV">
+                <img src="https://img.shields.io/badge/mysql-4479A1.svg?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL">
+                <img src="https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white" alt="Postgres">
+                <img src="https://img.shields.io/badge/pandas-%23150458.svg?style=for-the-badge&logo=pandas&logoColor=white" alt="Pandas">
+                <img src="https://img.shields.io/badge/numpy-%23013243.svg?style=for-the-badge&logo=numpy&logoColor=white" alt="NumPy">
+                <img src="https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?style=for-the-badge&logo=PyTorch&logoColor=white" alt="PyTorch">
+                <img src="https://img.shields.io/badge/Matplotlib-%23ffffff.svg?style=for-the-badge&logo=Matplotlib&logoColor=black" alt="Matplotlib">
+            </div>
+        </section>
+
+        <section id="github-stats">
+            <h3>GitHub Stats</h3>
+            <div class="stats-container">
+                <a href="https://git.io/streak-stats">
+                    <img src="https://streak-stats.demolab.com/?user=FlynnBui399&theme=merko" alt="GitHub Streak"/>
+                </a>
+            </div>
+        </section>
+
+        <footer>
+            <p>Thanks for visiting my profile</p>
+            <div class="visit-count">
+                <a href="https://visitcount.itsvg.in">
+                    <img src="https://visitcount.itsvg.in/api?id=FlynnBui399&icon=0&color=0" alt="Visit Count">
+                </a>
+            </div>
+        </footer>
+    </div>
+
 </body>
 </html>
