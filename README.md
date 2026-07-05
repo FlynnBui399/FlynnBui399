@@ -1,5 +1,5 @@
 <div align="center">
-
+<img src="./assets/clark-tibbs-oqStl2L5oxI-unsplash.jpg" alt="Profile cover" width="100%">
 # BUI TRAN TAN PHAT
 
 **AI Engineering Student | GenAI | Vision-Language Models | Medical Computer Vision**
