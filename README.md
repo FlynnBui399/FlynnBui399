@@ -2,9 +2,9 @@
 
 # BUI TRAN TAN PHAT
 
-**AI Engineering Intern | GenAI & Vision-Language Models**
+**AI Engineering Student | GenAI | Vision-Language Models | Medical Computer Vision**
 
-Highly motivated AI Engineering student with a foundation in Computer Vision and Machine Learning, currently expanding into Generative AI, RAG systems, and Vision-Language Models.
+I build practical AI workflows across data preparation, model training, evaluation, and retrieval-based applications.
 
 <a href="https://github.com/FlynnBui399">
   <img src="https://img.shields.io/badge/GitHub-FlynnBui399-181717?style=for-the-badge&logo=github" alt="GitHub profile">
@@ -18,19 +18,21 @@ Highly motivated AI Engineering student with a foundation in Computer Vision and
 
 </div>
 
-<br>
-
-<img align="right" width="280" src="./assets/avt.jpg" alt="Bui Tran Tan Phat profile photo">
+---
 
 ## About Me
 
-I am an Information Technology student specializing in Artificial Intelligence at HCMC University of Technology and Engineering. My work is strongest around medical computer vision, classical ML feature engineering, deep learning segmentation, and practical RAG pipelines.
+I am an AI Engineering student at **HCMC University of Technology and Engineering - HCMUTE**, specializing in **Artificial Intelligence**. My strongest work is in Computer Vision, Machine Learning, medical image analysis, and practical RAG pipelines.
 
-- Building toward AI engineering roles with a focus on applied ML systems.
-- Interested in GenAI, Vision-Language Models, retrieval systems, and medical AI.
-- Comfortable moving from data preparation to modeling, evaluation, and presentation.
-- Expected graduation: **August 2027**.
-- GPA: **3.42/4.0**.
+- Current direction: **GenAI, RAG systems, LLM API integration, Vision-Language Models**
+- Core strength: **Computer Vision, medical image analysis, model evaluation**
+- Education: **B.E. Information Technology, Artificial Intelligence specialization**
+- Expected graduation: **August 2027**
+- GPA: **3.42/4.0**
+
+> "Some people call this artificial intelligence, but the reality is this technology will enhance us. So, instead of artificial intelligence, I think we'll augment our intelligence."
+
+---
 
 ## Current Focus
 
@@ -41,7 +43,26 @@ GenAI / RAG          LLM API integration, ChromaDB, retrieval pipelines
 Data Workflow        Pandas, NumPy, Matplotlib, Seaborn
 ```
 
-## Selected Projects
+---
+
+## Tech Stack
+
+<p>
+  <img src="https://skillicons.dev/icons?i=python,pytorch,mysql,postgres,git,github" alt="Core technical stack">
+</p>
+
+| Area | Tools |
+| --- | --- |
+| Programming | Python, C++, C# |
+| ML / DL | PyTorch, LightGBM |
+| Data | Pandas, NumPy, Matplotlib, Seaborn |
+| Computer Vision | OpenCV, medical image processing |
+| Databases / Retrieval | MySQL, PostgreSQL, ChromaDB |
+| Soft Skills | Teamwork, time management, critical thinking, self-learning, research paper reading |
+
+---
+
+## Featured Projects
 
 ### Skin-Lesion Classification on HAM10000
 
@@ -68,32 +89,33 @@ Created a Retrieval-Augmented Generation pipeline for an intelligent question-an
 - Used vector database tooling for knowledge lookup.
 - Focused on practical QA behavior over static keyword search.
 
-## Technical Stack
+---
 
-<p>
-  <img src="https://skillicons.dev/icons?i=python,pytorch,mysql,git,github" alt="Core technical stack">
-</p>
-
-| Area | Tools |
-| --- | --- |
-| Programming | Python |
-| ML / DL | PyTorch, LightGBM |
-| Data | Pandas, NumPy, Matplotlib, Seaborn |
-| Computer Vision | OpenCV, medical image processing |
-| Databases / Retrieval | MySQL, ChromaDB |
-| Soft Skills | Teamwork, time management, critical thinking, self-learning, research paper reading |
-
-## GitHub Snapshot
+## GitHub Stats
 
 <div align="center">
 
-<img height="165" src="https://github-readme-stats.vercel.app/api?username=FlynnBui399&show_icons=true&theme=github_dark&hide_border=true" alt="GitHub stats">
-<img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=FlynnBui399&layout=compact&theme=github_dark&hide_border=true" alt="Top languages">
+<img height="170" src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=FlynnBui399&theme=github_dark" alt="GitHub stats">
+<img height="170" src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=FlynnBui399&theme=github_dark" alt="Top languages by repository">
+
+<br>
+
+<a href="https://git.io/streak-stats">
+  <img src="https://streak-stats.demolab.com/?user=FlynnBui399&theme=merko" alt="GitHub streak">
+</a>
 
 </div>
+
+---
 
 ## Contact
 
 - GitHub: [github.com/FlynnBui399](https://github.com/FlynnBui399)
 - LinkedIn: [linkedin.com/in/phatbtt-flynn-ai](http://www.linkedin.com/in/phatbtt-flynn-ai)
 - Resume: [BuiTranTanPhat_GenAI_Eng - Copy.pdf](./BuiTranTanPhat_GenAI_Eng%20-%20Copy.pdf)
+
+<div align="center">
+
+<strong>Thanks for visiting my profile.</strong>
+
+</div>
