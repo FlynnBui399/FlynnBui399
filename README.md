@@ -1,6 +1,6 @@
 <div align="center">
   
-<img src="./assets/clark-tibbs-oqStl2L5oxI-unsplash.jpg" alt="Profile cover" width="100%">
+<img src="./assets/clark-tibbs-oqStl2L5oxI-unsplash.jpg" alt="Profile cover" width="80%">
   
 # BUI TRAN TAN PHAT
 
