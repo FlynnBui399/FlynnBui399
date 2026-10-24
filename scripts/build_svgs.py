@@ -261,11 +261,8 @@ def build_section(no, name, note):
 
 def avatar_b64(w, h):
     src = ROOT / "assets" / "avt.jpg"
-    img = Image.open(src).convert("L")
+    img = Image.open(src).convert("RGB")
     img = ImageOps.fit(img, (w * 2, h * 2), centering=(0.5, 0.35))
-    img = ImageOps.autocontrast(img, cutoff=1)
-    # film tint: map black→film, white→pale blue-grey
-    img = ImageOps.colorize(img, black=FILM, white="#E6F0F5")
     buf = io.BytesIO()
     img.save(buf, "JPEG", quality=78, optimize=True)
     return base64.b64encode(buf.getvalue()).decode()
