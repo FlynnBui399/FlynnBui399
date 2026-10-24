@@ -33,7 +33,7 @@ TEXT, MUTED, AMBER = "#D8E6EE", "#7F98A6", "#FFB000"
 # Keep to ASCII + latin punctuation (· — – • ›): the embedded font is the latin subset.
 NAME = "BUI TRAN TAN PHAT"
 DICOM_NAME = "BUI^TRAN TAN PHAT"
-STUDENT_ID = "23110052"
+PATIENT_ID = "FLYNNBUI399"  # shown as PT ID / REF; keep it non-personal
 TAGLINE = "AI ENGINEERING STUDENT — VISION · RETRIEVAL · MEDICAL IMAGING"
 STATUS = "STATUS  OPEN TO INTERNSHIPS"
 
@@ -220,7 +220,7 @@ def build_header():
         f'stroke="{AMBER}" stroke-width="1.5"/>',
         # corner overlays
         t(44, 58, "PT NAME", 14, "m") + t(150, 58, DICOM_NAME, 14),
-        t(44, 80, "PT ID", 14, "m") + t(150, 80, STUDENT_ID, 14),
+        t(44, 80, "PT ID", 14, "m") + t(150, 80, PATIENT_ID, 14),
         t(44, 102, "STUDY", 14, "m") + t(150, 102, "AI ENGINEERING · HCMUTE", 14),
         t(W - 44, 58, "HO CHI MINH CITY · VN", 14, "m", "end"),
         t(W - 44, 80, "SERIES 2026 · IMG 001/399", 14, "m", "end"),
@@ -278,7 +278,7 @@ def build_report():
         f'<rect x="1" y="1" width="{W - 2}" height="52" fill="{PANEL}"/>',
         f'<path d="M0,53H{W}" stroke="{LINE}"/>',
         t(44, 34, "RADIOLOGY REPORT", 16, "a b"),
-        t(250, 34, f"REF {STUDENT_ID} · {DICOM_NAME}", 14, "m"),
+        t(250, 34, f"REF {PATIENT_ID} · {DICOM_NAME}", 14, "m"),
         t(W - 44, 34, "SIGNED  B.T.T. PHAT", 14, "m", "end"),
         f'<image x="{ax}" y="{ay}" width="{aw}" height="{ah}" '
         f'xlink:href="data:image/jpeg;base64,{avatar_b64(aw, ah)}" preserveAspectRatio="xMidYMid slice"/>',
