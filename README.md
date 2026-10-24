@@ -1,123 +1,139 @@
+<!-- Palette: navy #0D1B2A · deep navy #1B263B · cyan #00D4C8 · text #C9D1D9 -->
+
 <div align="center">
-  
-<img src="./assets/clark-tibbs-oqStl2L5oxI-unsplash.jpg" alt="Profile cover" width="80%">
-  
-# BUI TRAN TAN PHAT
 
-**AI Engineering Student | GenAI | Vision-Language Models | Medical Computer Vision**
-
-I build practical AI workflows across data preparation, model training, evaluation, and retrieval-based applications.
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0D1B2A,55:1B263B,100:00D4C8&height=220&section=header&text=Bui%20Tran%20Tan%20Phat&fontSize=50&fontColor=FFFFFF&fontAlignY=36&desc=AI%20Engineering%20Student%20%C2%B7%20HCMUTE&descSize=18&descAlignY=56&descAlign=50&animation=fadeIn" width="100%" alt="Bui Tran Tan Phat"/>
 
 <a href="https://github.com/FlynnBui399">
-  <img src="https://img.shields.io/badge/GitHub-FlynnBui399-181717?style=for-the-badge&logo=github" alt="GitHub profile">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&duration=3000&pause=900&color=00D4C8&center=true&vCenter=true&width=620&lines=Vision-Language+Models+%F0%9F%91%81%EF%B8%8F;RAG+Systems+%26+LLM+Integration+%F0%9F%A7%A0;Medical+Computer+Vision+%F0%9F%A9%BA;Turning+research+into+working+pipelines" alt="Typing SVG"/>
 </a>
-<a href="http://www.linkedin.com/in/phatbtt-flynn-ai">
-  <img src="https://img.shields.io/badge/LinkedIn-phatbtt--flynn--ai-0A66C2?style=for-the-badge&logo=linkedin" alt="LinkedIn profile">
-</a>
-<a href="./BuiTranTanPhat_GenAI_Eng%20-%20Copy.pdf">
-  <img src="https://img.shields.io/badge/Resume-PDF-00BD7D?style=for-the-badge&logo=readme" alt="Resume PDF">
-</a>
+
+<br/>
+
+<a href="http://www.linkedin.com/in/phatbtt-flynn-ai"><img src="https://img.shields.io/badge/LinkedIn-0D1B2A?style=for-the-badge&logo=data:image/svg%2bxml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZmlsbD0iIzAwRDRDOCIgZD0iTTIwLjQ1IDIwLjQ1aC0zLjU2di01LjU3YzAtMS4zMy0uMDItMy4wNC0xLjg1LTMuMDQtMS44NSAwLTIuMTQgMS40NS0yLjE0IDIuOTR2NS42N0g5LjM1VjloMy40MXYxLjU2aC4wNWMuNDgtLjkgMS42NC0xLjg1IDMuMzctMS44NSAzLjYgMCA0LjI3IDIuMzcgNC4yNyA1LjQ2djYuMjh6TTUuMzQgNy40M2EyLjA2IDIuMDYgMCAxIDEgMC00LjEzIDIuMDYgMi4wNiAwIDAgMSAwIDQuMTN6TTcuMTIgMjAuNDVIMy41NlY5aDMuNTZ2MTEuNDV6TTIyLjIyIDBIMS43N0MuNzkgMCAwIC43NyAwIDEuNzN2MjAuNTRDMCAyMy4yMy43OSAyNCAxLjc3IDI0aDIwLjQ1Yy45OCAwIDEuNzgtLjc3IDEuNzgtMS43M1YxLjczQzI0IC43NyAyMy4yIDAgMjIuMjIgMHoiLz48L3N2Zz4=" alt="LinkedIn"/></a>
+<a href="https://flynnbui399.github.io/FlynnBui399/"><img src="https://img.shields.io/badge/Portfolio-0D1B2A?style=for-the-badge&logo=googlechrome&logoColor=00D4C8" alt="Portfolio"/></a>
+<a href="./BuiTranTanPhat_Resume.pdf"><img src="https://img.shields.io/badge/Resume-00D4C8?style=for-the-badge&logo=readdotcv&logoColor=0D1B2A" alt="Resume"/></a>
 
 </div>
 
----
+<br/>
 
-## About Me
+## 👋 About Me
 
-I am an AI Engineering student at **HCMC University of Technology and Engineering - HCMUTE**, specializing in **Artificial Intelligence**. My strongest work is in Computer Vision, Machine Learning, medical image analysis, and practical RAG pipelines.
+<table>
+<tr>
+<td width="62%" valign="top">
 
-- Current direction: **GenAI, RAG systems, LLM API integration, Vision-Language Models**
-- Core strength: **Computer Vision, medical image analysis, model evaluation**
-- Education: **B.E. Information Technology, Artificial Intelligence specialization**
-- Expected graduation: **August 2027**
-- GPA: **3.42/4.0**
+I'm an **AI Engineering student at HCMUTE** who builds practical AI workflows — from data preparation and model training to evaluation and retrieval-based applications.
 
-> "Some people call this artificial intelligence, but the reality is this technology will enhance us. So, instead of artificial intelligence, I think we'll augment our intelligence."
+- 🎯 **Now:** GenAI, RAG systems, LLM API integration, Vision-Language Models
+- 🔬 **Strength:** Computer Vision, medical image analysis, model evaluation
+- 🎓 **B.E. Information Technology** — AI specialization · GPA **3.42/4.0**
+- 📅 **Graduating:** August 2027 · open to **AI / GenAI internships**
 
----
+> *"Instead of artificial intelligence, I think we'll augment our intelligence."*
 
-## Current Focus
+</td>
+<td width="38%" align="center" valign="middle">
+  <img src="./assets/avt.jpg" width="220" alt="Bui Tran Tan Phat"/>
+</td>
+</tr>
+</table>
 
-```text
-Computer Vision      Medical image analysis, OpenCV, feature engineering
-Machine Learning     PyTorch, LightGBM, model tuning, evaluation metrics
-GenAI / RAG          LLM API integration, ChromaDB, retrieval pipelines
-Data Workflow        Pandas, NumPy, Matplotlib, Seaborn
-```
+## 🛠️ Tech Stack
 
----
+<table>
+<tr>
+<td align="center" width="25%"><b>Languages</b><br/><br/><img src="https://skillicons.dev/icons?i=python,cpp,cs,java&perline=4" alt="Languages"/></td>
+<td align="center" width="25%"><b>ML / DL / CV</b><br/><br/><img src="https://skillicons.dev/icons?i=pytorch,sklearn,opencv&perline=3" alt="ML and CV"/></td>
+<td align="center" width="25%"><b>Data & Retrieval</b><br/><br/><img src="https://skillicons.dev/icons?i=postgres,mysql,supabase&perline=3" alt="Databases"/></td>
+<td align="center" width="25%"><b>Tools & Cloud</b><br/><br/><img src="https://skillicons.dev/icons?i=git,github,aws,vscode&perline=4" alt="Tools"/></td>
+</tr>
+</table>
 
-## Tech Stack
-
-<p>
-  <img src="https://skillicons.dev/icons?i=python,pytorch,mysql,postgres,git,github" alt="Core technical stack">
+<p align="center">
+  <img src="https://img.shields.io/badge/LightGBM-1B263B?style=flat-square" alt="LightGBM"/>
+  <img src="https://img.shields.io/badge/Qwen2.5--VL-1B263B?style=flat-square" alt="Qwen2.5-VL"/>
+  <img src="https://img.shields.io/badge/Qdrant-1B263B?style=flat-square" alt="Qdrant"/>
+  <img src="https://img.shields.io/badge/ChromaDB-1B263B?style=flat-square" alt="ChromaDB"/>
+  <img src="https://img.shields.io/badge/Pandas-1B263B?style=flat-square&logo=pandas&logoColor=00D4C8" alt="Pandas"/>
+  <img src="https://img.shields.io/badge/NumPy-1B263B?style=flat-square&logo=numpy&logoColor=00D4C8" alt="NumPy"/>
+  <img src="https://img.shields.io/badge/Modal-1B263B?style=flat-square" alt="Modal"/>
 </p>
 
-| Area | Tools |
-| --- | --- |
-| Programming | Python, C++, C# |
-| ML / DL | PyTorch, LightGBM |
-| Data | Pandas, NumPy, Matplotlib, Seaborn |
-| Computer Vision | OpenCV, medical image processing |
-| Databases / Retrieval | MySQL, PostgreSQL, ChromaDB |
-| Soft Skills | Teamwork, time management, critical thinking, self-learning, research paper reading |
+## 🚀 Featured Projects
 
----
+<table>
+<tr>
+<td width="50%" valign="top">
 
-## Featured Projects
+### 💊 [ViDrugLens](https://github.com/FlynnBui399/vidruglens-ocr-vlm)
+Vietnamese drug-package understanding: **OCR + Qwen2.5-VL** extraction with an agreement check, then **Qdrant RAG** for grounded answers with sources and safety warnings.
 
-### Skin-Lesion Classification on HAM10000
+![Python](https://img.shields.io/badge/Python-0D1B2A?style=flat-square&logo=python&logoColor=00D4C8)
+![VLM](https://img.shields.io/badge/VLM-0D1B2A?style=flat-square)
+![RAG](https://img.shields.io/badge/RAG-0D1B2A?style=flat-square)
 
-Built a classification workflow for imbalanced skin-lesion data by combining handcrafted visual features with clinical metadata.
+</td>
+<td width="50%" valign="top">
 
-- Engineered and integrated about 30 visual features into training matrices.
-- Fine-tuned LightGBM classifiers with randomized search.
-- Achieved **0.807 accuracy** and **0.946 OvR ROC-AUC** on severely imbalanced data.
+### 🩺 [Skin-Lesion Classification](https://github.com/FlynnBui399/skin-lession-classification-using-fusion-ham10000)
+Fuses ~30 handcrafted visual features with clinical metadata on the heavily imbalanced **HAM10000** dataset, tuned LightGBM.
 
-### High-Resolution Retinal Vessel Segmentation
+**0.946** OvR ROC-AUC · **0.807** accuracy
 
-Developed a deep learning model for retinal blood vessel segmentation, targeting micro-vessels that traditional methods often miss.
+![LightGBM](https://img.shields.io/badge/LightGBM-0D1B2A?style=flat-square)
+![OpenCV](https://img.shields.io/badge/OpenCV-0D1B2A?style=flat-square&logo=opencv&logoColor=00D4C8)
 
-- Used a **UNet++ decoder** with an **EfficientNet-B4 encoder**.
-- Applied advanced augmentation for high-resolution medical images.
-- Evaluated with Dice, IoU, Sensitivity, and Accuracy on the HRF dataset.
-- Reported strong results including **0.964 accuracy** and **0.771 Dice**.
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
 
-### Simple RAG System
+### 👁️ [Retinal Vessel Segmentation](https://github.com/FlynnBui399/DL-Research-Segmentation)
+High-resolution micro-vessel segmentation on **HRF** using a **UNet++** decoder with an **EfficientNet-B4** encoder.
 
-Created a Retrieval-Augmented Generation pipeline for an intelligent question-answering system for the HCMUTE IT Department.
+**0.964** accuracy · **0.771** Dice
 
-- Combined document retrieval with LLM API generation.
-- Used vector database tooling for knowledge lookup.
-- Focused on practical QA behavior over static keyword search.
+![PyTorch](https://img.shields.io/badge/PyTorch-0D1B2A?style=flat-square&logo=pytorch&logoColor=00D4C8)
+![Segmentation](https://img.shields.io/badge/Segmentation-0D1B2A?style=flat-square)
 
----
+</td>
+<td width="50%" valign="top">
 
-## GitHub Stats
+### 💬 [ViGoEmotions](https://github.com/FlynnBui399/vietnamese-emoji-emotion-recognition)
+Reproduces and extends an **EACL 2026** paper: **ViSoBERT** multi-label baseline + **Emoji2Vec** dual-encoder fusion with R-Drop and contrastive losses, trained on **Modal A100**.
 
-<div align="center">
+**28** emotion labels · Vietnamese social-media text
 
-<img height="170" src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=FlynnBui399&theme=github_dark" alt="GitHub stats">
-<img height="170" src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=FlynnBui399&theme=github_dark" alt="Top languages by repository">
+![HuggingFace](https://img.shields.io/badge/Transformers-0D1B2A?style=flat-square&logo=huggingface&logoColor=00D4C8)
+![PyTorch](https://img.shields.io/badge/PyTorch-0D1B2A?style=flat-square&logo=pytorch&logoColor=00D4C8)
 
-<br>
+</td>
+</tr>
+</table>
 
-<a href="https://git.io/streak-stats">
-  <img src="https://streak-stats.demolab.com/?user=FlynnBui399&theme=merko" alt="GitHub streak">
-</a>
+<p align="center">
+  <a href="https://github.com/FlynnBui399?tab=repositories"><img src="https://img.shields.io/badge/See_all_repositories-1B263B?style=for-the-badge&logo=github&logoColor=00D4C8" alt="All repositories"/></a>
+</p>
 
-</div>
-
----
-
-## Contact
-
-- GitHub: [github.com/FlynnBui399](https://github.com/FlynnBui399)
-- LinkedIn: [linkedin.com/in/phatbtt-flynn-ai](http://www.linkedin.com/in/phatbtt-flynn-ai)
-- Resume: [BuiTranTanPhat_GenAI_Eng - Copy.pdf](./BuiTranTanPhat_GenAI_Eng%20-%20Copy.pdf)
+## 📊 GitHub Stats
 
 <div align="center">
 
-<strong>Thanks for visiting my profile.</strong>
+<img height="165" src="https://github-readme-stats.vercel.app/api?username=FlynnBui399&show_icons=true&hide_border=false&bg_color=0D1B2A&title_color=00D4C8&icon_color=00D4C8&text_color=C9D1D9&border_color=1B263B&border_radius=10&rank_icon=github" alt="GitHub stats"/>
+<img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=FlynnBui399&layout=compact&langs_count=6&bg_color=0D1B2A&title_color=00D4C8&text_color=C9D1D9&border_color=1B263B&border_radius=10" alt="Top languages"/>
+
+<img src="https://streak-stats.demolab.com/?user=FlynnBui399&background=0D1B2A&border=1B263B&ring=00D4C8&fire=00D4C8&currStreakNum=FFFFFF&sideNums=FFFFFF&currStreakLabel=00D4C8&sideLabels=C9D1D9&dates=8B949E&stroke=1B263B&border_radius=10" alt="GitHub streak"/>
+
+<br/><br/>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/FlynnBui399/FlynnBui399/output/github-snake-dark.svg"/>
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/FlynnBui399/FlynnBui399/output/github-snake.svg"/>
+  <img src="https://raw.githubusercontent.com/FlynnBui399/FlynnBui399/output/github-snake-dark.svg" alt="Snake eating contributions"/>
+</picture>
 
 </div>
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:00D4C8,45:1B263B,100:0D1B2A&height=120&section=footer" width="100%" alt=""/>
