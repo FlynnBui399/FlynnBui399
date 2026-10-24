@@ -1,4 +1,4 @@
-<!-- X-ray / DICOM theme. SVGs in assets/xray/ are generated: edit scripts/build_svgs.py, then run `python scripts/build_svgs.py`. -->
+<!-- X-ray film theme. SVGs in assets/xray/ are generated: edit scripts/build_svgs.py, then run `python scripts/build_svgs.py`. -->
 <!-- Palette: film #0A0F14 · panel #0F161D · line #1D2A33 · text #D8E6EE · muted #7F98A6 · amber #FFB000 -->
 
 <p align="center">
@@ -13,19 +13,19 @@
 
 <br/>
 
-<img src="./assets/xray/se01.svg" width="100%" alt="Series 01 — About"/>
+<img src="./assets/xray/se01.svg" width="100%" alt="01 / About"/>
 
 <p align="center">
   <img src="./assets/xray/report.svg" width="100%" alt="About: AI Engineering student at HCMUTE, GPA 3.42/4.0, graduating 08/2027. Strong in computer vision and medical image analysis; building RAG systems, LLM integrations and VLMs. Open to AI / GenAI internships."/>
 </p>
 
-<img src="./assets/xray/se02.svg" width="100%" alt="Series 02 — Tech stack"/>
+<img src="./assets/xray/se02.svg" width="100%" alt="02 / Tech stack"/>
 
 <p align="center">
   <img src="./assets/xray/stack.svg" width="100%" alt="Tech stack: Python, C++, C#, Java; PyTorch, scikit-learn, LightGBM, Transformers; OpenCV, UNet++, EfficientNet, Qwen2.5-VL; Qdrant, ChromaDB, pgvector, bge-m3; Pandas, NumPy; Modal, AWS, PostgreSQL, MySQL, Git"/>
 </p>
 
-<img src="./assets/xray/se03.svg" width="100%" alt="Series 03 — Projects"/>
+<img src="./assets/xray/se03.svg" width="100%" alt="03 / Projects"/>
 
 <p align="center">
   <a href="https://github.com/FlynnBui399/vidruglens-ocr-vlm"><img src="./assets/xray/card-vidruglens.svg" width="49%" alt="ViDrugLens: Vietnamese drug-package understanding with OCR, Qwen2.5-VL and Qdrant RAG"/></a>
@@ -34,7 +34,7 @@
   <a href="https://github.com/FlynnBui399/vietnamese-emoji-emotion-recognition"><img src="./assets/xray/card-vigoemotions.svg" width="49%" alt="ViGoEmotions: emoji-aware Vietnamese emotion recognition, EACL 2026 reproduction"/></a>
 </p>
 
-<img src="./assets/xray/se04.svg" width="100%" alt="Series 04 — Activity"/>
+<img src="./assets/xray/se04.svg" width="100%" alt="04 / Activity"/>
 
 <p align="center">
   <img height="165" src="https://github-readme-stats.vercel.app/api?username=FlynnBui399&show_icons=true&bg_color=0A0F14&title_color=FFB000&icon_color=FFB000&text_color=D8E6EE&ring_color=FFB000&border_color=1D2A33&border_radius=0&rank_icon=github" alt="GitHub stats"/>
@@ -46,7 +46,7 @@
 </p>
 
 <p align="center">
-  <img src="./assets/xray/contrib.svg" width="100%" alt="Contribution scan: GitHub contributions over the last 12 months"/>
+  <img src="./assets/xray/contrib.svg" width="100%" alt="Contributions: GitHub contributions over the last 12 months"/>
 </p>
 
-<img src="./assets/xray/footer.svg" width="100%" alt="End of study — thank you for viewing"/>
+<img src="./assets/xray/footer.svg" width="100%" alt="Thanks for stopping by"/>

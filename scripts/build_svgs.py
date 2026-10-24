@@ -1,4 +1,4 @@
-"""Build the X-ray / DICOM themed SVGs used by the profile README.
+"""Build the X-ray film themed SVGs used by the profile README.
 
 Edit the CONTENT section, then run from the repo root:
 
@@ -32,40 +32,47 @@ TEXT, MUTED, AMBER = "#D8E6EE", "#7F98A6", "#FFB000"
 # ── CONTENT ──────────────────────────────────────────────────────────────────
 # Keep to ASCII + latin punctuation (· — – • ›): the embedded font is the latin subset.
 NAME = "BUI TRAN TAN PHAT"
-DICOM_NAME = "BUI^TRAN TAN PHAT"
-PATIENT_ID = "FLYNNBUI399"  # shown as PT ID / REF; keep it non-personal
-TAGLINE = "AI ENGINEERING STUDENT — VISION · RETRIEVAL · MEDICAL IMAGING"
-STATUS = "STATUS  OPEN TO INTERNSHIPS"
+TAGLINE = "AI ENGINEER IN TRAINING — COMPUTER VISION · LLM · RAG"
+HANDLE = "@FLYNNBUI399"
 
-REPORT = {
-    "CLINICAL INFO": [
+# Header: four corner blocks of (label, value). Use "" as label for a plain line.
+HEADER_TL = [("ROLE", "AI ENGINEERING STUDENT"), ("SCHOOL", "HCMUTE"), ("FOCUS", "CV · VLM · RAG")]
+HEADER_TR = ["HO CHI MINH CITY · VN", "GRADUATING 08/2027", f"GITHUB {HANDLE}"]
+HEADER_BL = [("NOW", "BUILDING VIDRUGLENS"), ("STACK", "PYTHON · PYTORCH")]
+STATUS = "OPEN TO AI / GENAI INTERNSHIPS"
+HEADER_ROI = "RETINA SEG · DICE .771"  # label on the dashed box over the retina drawing
+
+ABOUT_TITLE = "ABOUT ME"
+ABOUT_RIGHT = "HO CHI MINH CITY · VN"
+ABOUT = {
+    "EDUCATION": [
         "AI Engineering student at HCMUTE (B.E. IT, AI specialization).",
         "GPA 3.42 / 4.0 · expected graduation 08/2027.",
     ],
-    "FINDINGS": [
-        "• Strong signal in computer vision and medical image analysis.",
-        "• Active development in GenAI: RAG systems, LLM APIs, VLMs.",
-        "• Works end to end: data prep › training › evaluation › apps.",
+    "WHAT I DO": [
+        "• Computer vision and medical image analysis.",
+        "• GenAI: RAG systems, LLM API integration, vision-language models.",
+        "• End to end: data prep › training › evaluation › apps.",
     ],
-    "IMPRESSION": [
-        "Curious, practical engineer. Open to AI / GenAI internships.",
+    "LOOKING FOR": [
+        "AI / GenAI internships where I can ship real models.",
     ],
 }
-FOOTER = "END OF STUDY · 4 SERIES · THANK YOU FOR VIEWING"
-QUOTE = '"Instead of artificial intelligence, we\'ll augment our intelligence."'
+FOOTER = "THANKS FOR STOPPING BY · LET'S BUILD SOMETHING"
+QUOTE = "\"Instead of artificial intelligence, we'll augment our intelligence.\""
 
 STACK = [
-    ("(0010,0010)", "LO", "LANGUAGES", "Python · C++ · C# · Java"),
-    ("(0018,0015)", "LO", "ML / DL", "PyTorch · scikit-learn · LightGBM · Transformers"),
-    ("(0018,1030)", "LO", "VISION", "OpenCV · UNet++ · EfficientNet · Qwen2.5-VL"),
-    ("(0020,000D)", "UI", "RETRIEVAL", "Qdrant · ChromaDB · pgvector · bge-m3"),
-    ("(0028,0030)", "DS", "DATA", "Pandas · NumPy · Matplotlib · Seaborn"),
-    ("(0040,0254)", "LO", "INFRA", "Modal · AWS · PostgreSQL · MySQL · Git"),
+    ("LANGUAGES", "Python · C++ · C# · Java"),
+    ("ML / DL", "PyTorch · scikit-learn · LightGBM · Transformers"),
+    ("VISION", "OpenCV · UNet++ · EfficientNet · Qwen2.5-VL"),
+    ("RETRIEVAL", "Qdrant · ChromaDB · pgvector · bge-m3"),
+    ("DATA", "Pandas · NumPy · Matplotlib · Seaborn"),
+    ("INFRA", "Modal · AWS · PostgreSQL · MySQL · Git"),
 ]
 
 PROJECTS = [
     {
-        "slug": "vidruglens", "title": "VIDRUGLENS", "motif": "blister",
+        "slug": "vidruglens", "title": "VIDRUGLENS", "kind": "VLM · RAG", "motif": "blister",
         "desc": ["Vietnamese drug-package understanding:",
                  "OCR + Qwen2.5-VL extraction with an agreement",
                  "check, grounded answers via Qdrant RAG."],
@@ -73,7 +80,7 @@ PROJECTS = [
         "tags": ["PYTHON", "VLM", "RAG"],
     },
     {
-        "slug": "ham10000", "title": "SKIN-LESION CLS", "motif": "lesion",
+        "slug": "ham10000", "title": "SKIN-LESION CLS", "kind": "CLASSIFICATION", "motif": "lesion",
         "desc": ["~30 handcrafted visual features fused with",
                  "clinical metadata on heavily imbalanced",
                  "HAM10000, tuned LightGBM."],
@@ -81,7 +88,7 @@ PROJECTS = [
         "tags": ["LIGHTGBM", "OPENCV"],
     },
     {
-        "slug": "retina", "title": "RETINAL VESSEL SEG", "motif": "vessels",
+        "slug": "retina", "title": "RETINAL VESSEL SEG", "kind": "SEGMENTATION", "motif": "vessels",
         "desc": ["High-resolution micro-vessel segmentation",
                  "on HRF: UNet++ decoder with an",
                  "EfficientNet-B4 encoder."],
@@ -89,7 +96,7 @@ PROJECTS = [
         "tags": ["PYTORCH", "SEGMENTATION"],
     },
     {
-        "slug": "vigoemotions", "title": "VIGOEMOTIONS", "motif": "wave",
+        "slug": "vigoemotions", "title": "VIGOEMOTIONS", "kind": "NLP", "motif": "wave",
         "desc": ["Reproduces and extends an EACL 2026 paper:",
                  "ViSoBERT multi-label baseline + Emoji2Vec",
                  "dual-encoder fusion, trained on Modal A100."],
@@ -99,10 +106,10 @@ PROJECTS = [
 ]
 
 SECTIONS = [
-    ("01", "ABOUT", "RADIOLOGY REPORT"),
-    ("02", "TECH STACK", "DICOM TAG DUMP"),
-    ("03", "PROJECTS", "4 IMAGES"),
-    ("04", "ACTIVITY", "LONGITUDINAL STUDY"),
+    ("01", "ABOUT", "WHO I AM"),
+    ("02", "TECH STACK", "TOOLS I USE"),
+    ("03", "PROJECTS", "SELECTED WORK"),
+    ("04", "ACTIVITY", "LAST 12 MONTHS"),
 ]
 
 BUTTONS = [
@@ -214,19 +221,16 @@ def build_header():
         f'<circle cx="{cx - 40}" cy="{cy + 10}" r="9" fill="none" stroke="{LINE}" stroke-width="2"/>',
         f'<rect x="{cx - 120}" y="{cy + 18}" width="92" height="72" fill="none" stroke="{AMBER}" '
         f'stroke-width="1.5" stroke-dasharray="6 6" class="ants"/>',
-        t(cx - 120, cy + 108, "ROI 01 · DICE .771", 13, "a"),
+        t(cx - 120, cy + 108, HEADER_ROI, 13, "a"),
         # crosshair on fundus
         f'<path d="M{cx},{cy - r - 14}v10 M{cx},{cy + r + 4}v10 M{cx - r - 14},{cy}h10 M{cx + r + 4},{cy}h10" '
         f'stroke="{AMBER}" stroke-width="1.5"/>',
         # corner overlays
-        t(44, 58, "PT NAME", 14, "m") + t(150, 58, DICOM_NAME, 14),
-        t(44, 80, "PT ID", 14, "m") + t(150, 80, PATIENT_ID, 14),
-        t(44, 102, "STUDY", 14, "m") + t(150, 102, "AI ENGINEERING · HCMUTE", 14),
-        t(W - 44, 58, "HO CHI MINH CITY · VN", 14, "m", "end"),
-        t(W - 44, 80, "SERIES 2026 · IMG 001/399", 14, "m", "end"),
-        t(W - 44, 102, "MODALITY CV / VLM / RAG", 14, "m", "end"),
-        t(44, H - 64, "W:1600  L:400", 14, "m"),
-        t(44, H - 42, "512 x 512 · 1.0 mm", 14, "m"),
+        "".join(t(44, 58 + k * 22, lab, 14, "m") + t(130, 58 + k * 22, val, 14)
+                for k, (lab, val) in enumerate(HEADER_TL)),
+        "".join(t(W - 44, 58 + k * 22, ln, 14, "m", "end") for k, ln in enumerate(HEADER_TR)),
+        "".join(t(44, H - 64 + k * 22, lab, 14, "m") + t(130, H - 64 + k * 22, val, 14)
+                for k, (lab, val) in enumerate(HEADER_BL)),
         t(W - 44, H - 42, STATUS, 14, anchor="end"),
         f'<circle cx="{W - 44 - len(STATUS) * 8.4 - 14:.0f}" cy="{H - 47}" r="5" fill="{AMBER}" class="blink"/>',
         # name block
@@ -234,9 +238,6 @@ def build_header():
         t(84, 222, NAME, 52, "b"),
         t(86, 256, TAGLINE, 14, "m"),
         f'<rect x="{86 + len(TAGLINE) * 8.4 + 6}" y="244" width="9" height="15" fill="{AMBER}" class="blink"/>',
-        # scale bar
-        f'<path d="M44,{H - 96}h120 M44,{H - 101}v10 M164,{H - 101}v10" stroke="{AMBER}" stroke-width="1.5"/>',
-        t(172, H - 92, "10 mm", 12, "a"),
         # scanline
         f'<g class="scan"><rect x="12" y="0" width="{W - 24}" height="2" fill="{AMBER}" opacity=".35"/>'
         f'<rect x="12" y="-18" width="{W - 24}" height="18" fill="{AMBER}" opacity=".05"/></g>',
@@ -249,13 +250,13 @@ def build_section(no, name, note):
     W, H = 1200, 64
     body = [
         f'<rect width="{W}" height="{H}" fill="{FILM}"/>',
-        t(24, 32, f"SE {no}", 20, "a b"),
-        t(102, 32, f"/ {name}", 20, "b"),
+        t(24, 32, no, 20, "a b"),
+        t(64, 32, f"/ {name}", 20, "b"),
         t(W - 24, 32, note, 14, "m", "end"),
         f'<path d="M0,46H{W}" stroke="{LINE}"/>',
         ruler(0, W, 46, up=False),
     ]
-    return svg(W, H, "".join(body), f"Series {no}: {name}")
+    return svg(W, H, "".join(body), f"{no} / {name}")
 
 
 def avatar_b64(w, h):
@@ -277,48 +278,46 @@ def build_report():
         frame(W, H),
         f'<rect x="1" y="1" width="{W - 2}" height="52" fill="{PANEL}"/>',
         f'<path d="M0,53H{W}" stroke="{LINE}"/>',
-        t(44, 34, "RADIOLOGY REPORT", 16, "a b"),
-        t(250, 34, f"REF {PATIENT_ID} · {DICOM_NAME}", 14, "m"),
-        t(W - 44, 34, "SIGNED  B.T.T. PHAT", 14, "m", "end"),
+        t(44, 34, ABOUT_TITLE, 16, "a b"),
+        t(200, 34, f"{NAME} · {HANDLE}", 14, "m"),
+        t(W - 44, 34, ABOUT_RIGHT, 14, "m", "end"),
         f'<image x="{ax}" y="{ay}" width="{aw}" height="{ah}" '
         f'xlink:href="data:image/jpeg;base64,{avatar_b64(aw, ah)}" preserveAspectRatio="xMidYMid slice"/>',
         brackets(ax - 8, ay - 8, aw + 16, ah + 16, 18),
-        t(ax, ay + ah + 34, "FIG.1  SUBJECT · AP VIEW", 13, "m"),
     ]
     x, y = 350, 104
-    for label, lines in REPORT.items():
+    for label, lines in ABOUT.items():
         body.append(t(x, y, label, 15, "a b"))
         y += 30
         for ln in lines:
             body.append(t(x, y, ln, 18))
             y += 28
         y += 18
-    body.append(f'<rect x="{x + len(REPORT["IMPRESSION"][-1]) * 10.8 + 8}" y="{y - 64}" '
+    body.append(f'<rect x="{x + len(list(ABOUT.values())[-1][-1]) * 10.8 + 8}" y="{y - 64}" '
                 f'width="10" height="20" fill="{AMBER}" class="blink"/>')
     body.append(f'<path d="M{x},{H - 58}H{W - 44}" stroke="{LINE}"/>')
     body.append(t(x, H - 30, QUOTE, 14, "m"))
-    return svg(W, H, "".join(body), "About: " + " ".join(sum(REPORT.values(), [])))
+    return svg(W, H, "".join(body), "About: " + " ".join(sum(ABOUT.values(), [])))
 
 
 def build_stack():
     W = 1200
     row_h, top = 40, 92
     H = top + row_h * len(STACK) + 36
-    cols = (44, 210, 280, 470)
+    cols = (44, 110, 330)
     body = [
         frame(W, H),
-        t(cols[0], 52, "TAG", 14, "m"), t(cols[1], 52, "VR", 14, "m"),
-        t(cols[2], 52, "ATTRIBUTE", 14, "m"), t(cols[3], 52, "VALUE", 14, "m"),
+        t(cols[0], 52, "#", 14, "m"), t(cols[1], 52, "AREA", 14, "m"), t(cols[2], 52, "TOOLS", 14, "m"),
         f'<path d="M44,66H{W - 44}" stroke="{LINE}"/>',
     ]
-    for i, (tag, vr, attr, val) in enumerate(STACK):
+    for i, (attr, val) in enumerate(STACK):
         y = top + i * row_h
         if i % 2 == 0:
             body.append(f'<rect x="32" y="{y - 26}" width="{W - 64}" height="{row_h}" fill="{PANEL}"/>')
-        body += [t(cols[0], y, tag, 17, "m"), t(cols[1], y, vr, 17, "a"),
-                 t(cols[2], y, attr, 17, "b"), t(cols[3], y, val, 17)]
+        body += [t(cols[0], y, f"{i + 1:02d}", 17, "a"),
+                 t(cols[1], y, attr, 17, "b"), t(cols[2], y, val, 17)]
     return svg(W, H, "".join(body),
-               "Tech stack: " + "; ".join(f"{a}: {v}" for _, _, a, v in STACK))
+               "Tech stack: " + "; ".join(f"{a}: {v}" for a, v in STACK))
 
 
 def motif(kind, x, y, w, h, seed):
@@ -370,8 +369,8 @@ def build_card(i, p):
     W, H = 600, 340
     body = [
         frame(W, H),
-        t(28, 40, f"IMG {i + 1:02d}/{len(PROJECTS):02d}", 14, "a b"),
-        t(W - 28, 40, "SE 03 · PROJECTS", 13, "m", "end"),
+        t(28, 40, f"PROJECT {i + 1:02d}", 14, "a b"),
+        t(W - 28, 40, p["kind"], 13, "m", "end"),
         f'<path d="M28,54H{W - 28}" stroke="{LINE}"/>',
         motif(p["motif"], 404, 76, 172, 190, seed=i + 7),
         t(28, 98, p["title"], 26, "b"),
@@ -392,7 +391,7 @@ def build_card(i, p):
         body.append(f'<rect x="{tx}" y="{H - 38}" width="{tw:.0f}" height="22" fill="none" stroke="{LINE}"/>')
         body.append(t(tx + 9, H - 22, tag, 12))
         tx += tw + 8
-    body.append(t(W - 28, H - 22, "OPEN ›", 13, "a", "end"))
+    body.append(t(W - 28, H - 22, "VIEW REPO ›", 13, "a", "end"))
     return svg(W, H, "".join(body), f'{p["title"]}: {" ".join(p["desc"])}')
 
 
@@ -453,7 +452,7 @@ def build_contrib(total, weeks):
         frame(W, H),
         f'<rect x="1" y="1" width="{W - 2}" height="52" fill="{PANEL}"/>',
         f'<path d="M0,53H{W}" stroke="{LINE}"/>',
-        t(44, 34, "CONTRIBUTION SCAN", 16, "a b"),
+        t(44, 34, "CONTRIBUTIONS", 16, "a b"),
         t(260, 34, f"{days[0]['date']} – {days[-1]['date']} · {len(weeks)} WEEKS", 14, "m"),
         t(W - 44, 34, f"SOURCE GITHUB GRAPHQL · BUILT {date.today().isoformat()}", 14, "m", "end"),
         # readouts
@@ -486,7 +485,7 @@ def build_contrib(total, weeks):
     body += [
         f'<rect x="{rx}" y="{gy - 4}" width="{cell + 8}" height="{7 * pitch + 4}" fill="none" '
         f'stroke="{AMBER}" stroke-width="1.5" stroke-dasharray="6 6" class="ants"/>',
-        t(min(rx, gx + grid_w - 110), gy + 7 * pitch + 22, "ROI · PEAK WEEK", 12, "a"),
+        t(min(rx, gx + grid_w - 110), gy + 7 * pitch + 22, "PEAK WEEK", 12, "a"),
         f'<g class="sweep"><rect x="{gx - 2}" y="{gy - 8}" width="2" height="{7 * pitch + 12}" '
         f'fill="{AMBER}" opacity=".55"/></g>',
     ]
