@@ -46,11 +46,7 @@
 </p>
 
 <p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/FlynnBui399/FlynnBui399/output/github-snake-dark.svg"/>
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/FlynnBui399/FlynnBui399/output/github-snake.svg"/>
-    <img src="https://raw.githubusercontent.com/FlynnBui399/FlynnBui399/output/github-snake-dark.svg" alt="Contribution graph scanned by a snake"/>
-  </picture>
+  <img src="./assets/xray/contrib.svg" width="100%" alt="Contribution scan: GitHub contributions over the last 12 months"/>
 </p>
 
 <img src="./assets/xray/footer.svg" width="100%" alt="End of study — thank you for viewing"/>

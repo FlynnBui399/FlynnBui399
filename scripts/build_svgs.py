@@ -4,14 +4,18 @@ Edit the CONTENT section, then run from the repo root:
 
     python scripts/build_svgs.py
 
-Output goes to assets/xray/. Fonts (IBM Plex Mono, OFL) are embedded into every
+Output goes to assets/xray/. contrib.svg pulls your contribution calendar through
+the GitHub CLI (`gh auth login` first); rerun the script to refresh it. Fonts (IBM Plex Mono, OFL) are embedded into every
 SVG because GitHub blocks external resources inside images.
 """
 
 import base64
 import io
+import json
 import math
 import random
+import subprocess
+from datetime import date
 from html import escape
 from pathlib import Path
 
@@ -98,7 +102,7 @@ SECTIONS = [
     ("01", "ABOUT", "RADIOLOGY REPORT"),
     ("02", "TECH STACK", "DICOM TAG DUMP"),
     ("03", "PROJECTS", "4 IMAGES"),
-    ("04", "ACTIVITY", "LIVE SIGNAL"),
+    ("04", "ACTIVITY", "LONGITUDINAL STUDY"),
 ]
 
 BUTTONS = [
@@ -415,10 +419,96 @@ def build_footer():
     return svg(W, H, "".join(body), "End of study — thank you for viewing")
 
 
+GITHUB_LOGIN = "FlynnBui399"
+CONTRIB_QUERY = """query($login:String!){user(login:$login){contributionsCollection{
+contributionCalendar{totalContributions weeks{contributionDays{date contributionCount contributionLevel}}}}}}"""
+LEVEL_FILL = {"NONE": PANEL, "FIRST_QUARTILE": "#3D2E06", "SECOND_QUARTILE": "#7A5800",
+              "THIRD_QUARTILE": "#C08600", "FOURTH_QUARTILE": AMBER}
+
+
+def fetch_contributions():
+    """Last-year contribution calendar via the GitHub CLI (needs `gh auth login`)."""
+    res = subprocess.run(
+        ["gh", "api", "graphql", "-f", f"query={CONTRIB_QUERY}", "-F", f"login={GITHUB_LOGIN}"],
+        capture_output=True, text=True, check=True, encoding="utf-8")
+    cal = json.loads(res.stdout)["data"]["user"]["contributionsCollection"]["contributionCalendar"]
+    return cal["totalContributions"], [w["contributionDays"] for w in cal["weeks"]]
+
+
+def build_contrib(total, weeks):
+    days = [d for w in weeks for d in w]
+    longest = run = 0
+    for d in days:
+        run = run + 1 if d["contributionCount"] else 0
+        longest = max(longest, run)
+    peak = max(days, key=lambda d: d["contributionCount"])
+    peak_col = next(i for i, w in enumerate(weeks) if peak in w)
+
+    W, H = 1200, 300
+    gx, gy, pitch, cell = 300, 112, 16, 12
+    grid_w = len(weeks) * pitch
+    css = (f"@keyframes sweep{{from{{transform:translateX(0)}}to{{transform:translateX({grid_w}px)}}}}"
+           ".sweep{animation:sweep 7s linear infinite}")
+    body = [
+        frame(W, H),
+        f'<rect x="1" y="1" width="{W - 2}" height="52" fill="{PANEL}"/>',
+        f'<path d="M0,53H{W}" stroke="{LINE}"/>',
+        t(44, 34, "CONTRIBUTION SCAN", 16, "a b"),
+        t(260, 34, f"{days[0]['date']} – {days[-1]['date']} · {len(weeks)} WEEKS", 14, "m"),
+        t(W - 44, 34, f"SOURCE GITHUB GRAPHQL · BUILT {date.today().isoformat()}", 14, "m", "end"),
+        # readouts
+        t(44, 136, str(total), 44, "a b"),
+        t(44, 158, "CONTRIBUTIONS / 12 MO", 12, "m"),
+        t(44, 204, f"{longest} D", 26, "b"),
+        t(44, 224, "LONGEST STREAK", 12, "m"),
+        t(44, 266, f"{peak['contributionCount']} · {peak['date']}", 15, "b"),
+        t(44, 284, "PEAK DAY", 12, "m"),
+    ]
+    for label, row in (("MON", 1), ("WED", 3), ("FRI", 5)):
+        body.append(t(gx - 12, gy + row * pitch + 10, label, 11, "m", "end"))
+    last_month, last_label = None, -9
+    for i, w in enumerate(weeks):
+        month = w[-1]["date"][5:7]  # label a week by the month it ends in
+        if month != last_month:
+            if i - last_label >= 3 and i < len(weeks) - 2:
+                body.append(t(gx + i * pitch, gy - 12,
+                              date.fromisoformat(w[-1]["date"]).strftime("%b").upper(), 11, "m"))
+                last_label = i
+            last_month = month
+        for d in w:
+            row = date.fromisoformat(d["date"]).isoweekday() % 7  # Sunday = 0, like GitHub
+            fill = LEVEL_FILL[d["contributionLevel"]]
+            stroke = f' stroke="{LINE}"' if d["contributionLevel"] == "NONE" else ""
+            body.append(f'<rect x="{gx + i * pitch}" y="{gy + row * pitch}" width="{cell}" height="{cell}" '
+                        f'fill="{fill}"{stroke}/>')
+    # ROI around the peak week, then the sweeping scan line
+    rx = gx + peak_col * pitch - 4
+    body += [
+        f'<rect x="{rx}" y="{gy - 4}" width="{cell + 8}" height="{7 * pitch + 4}" fill="none" '
+        f'stroke="{AMBER}" stroke-width="1.5" stroke-dasharray="6 6" class="ants"/>',
+        t(min(rx, gx + grid_w - 110), gy + 7 * pitch + 22, "ROI · PEAK WEEK", 12, "a"),
+        f'<g class="sweep"><rect x="{gx - 2}" y="{gy - 8}" width="2" height="{7 * pitch + 12}" '
+        f'fill="{AMBER}" opacity=".55"/></g>',
+    ]
+    lx = gx + grid_w - 5 * pitch
+    body.append(t(lx - 10, H - 22, "LESS", 11, "m", "end"))
+    for k, fill in enumerate(LEVEL_FILL.values()):
+        body.append(f'<rect x="{lx + k * pitch}" y="{H - 33}" width="{cell}" height="{cell}" fill="{fill}" '
+                    f'stroke="{LINE}"/>')
+    body.append(t(lx + 5 * pitch + 4, H - 22, "MORE", 11, "m"))
+    return svg(W, H, "".join(body),
+               f"{total} contributions in the last year; longest streak {longest} days; "
+               f"peak {peak['contributionCount']} on {peak['date']}", css)
+
+
 def main():
     OUT.mkdir(parents=True, exist_ok=True)
     files = {"header.svg": build_header(), "report.svg": build_report(),
              "stack.svg": build_stack(), "footer.svg": build_footer()}
+    try:
+        files["contrib.svg"] = build_contrib(*fetch_contributions())
+    except (OSError, subprocess.CalledProcessError, KeyError) as e:
+        print(f"! contrib.svg skipped (gh not available or not logged in): {e}")
     for no, name, note in SECTIONS:
         files[f"se{no}.svg"] = build_section(no, name, note)
     for i, p in enumerate(PROJECTS):
