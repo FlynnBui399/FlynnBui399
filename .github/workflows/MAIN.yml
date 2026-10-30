@@ -1,0 +1,57 @@
+# Generates the stats cards and contribution-grid snake, then publishes them to the `output` branch.
+# README reads: raw.githubusercontent.com/FlynnBui399/FlynnBui399/output/{stats,top-langs,github-snake,github-snake-dark}.svg
+
+name: Generate Profile Cards
+
+on:
+  schedule:
+    - cron: "0 */12 * * *" # every 12 hours
+  workflow_dispatch:       # run manually from the Actions tab
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      # The public github-readme-stats Vercel instance is unreliable, so cards are built here.
+      # fail_on_error stops the run on API errors, keeping the last good cards on `output`.
+      - name: Generate stats card
+        uses: stats-organization/github-readme-stats-action@v2
+        with:
+          card: stats
+          options: show_icons=true&rank_icon=github&bg_color=1A2C04&title_color=A1DB01&icon_color=A1DB01&text_color=C8D8AE&ring_color=A1DB01&border_color=506925&border_radius=16
+          path: dist/stats.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fail_on_error: true
+
+      - name: Generate top languages card
+        uses: stats-organization/github-readme-stats-action@v2
+        with:
+          card: top-langs
+          options: layout=compact&langs_count=6&hide=html,css&bg_color=1A2C04&title_color=A1DB01&text_color=C8D8AE&border_color=506925&border_radius=16
+          path: dist/top-langs.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fail_on_error: true
+
+      - name: Generate snake SVGs
+        uses: Platane/snk@v3
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          # Canopy forest + lime palette: empty cell first, then 4 contribution levels
+          outputs: |
+            dist/github-snake.svg?color_snake=#1A2C04&color_dots=#ebedf0,#d4f08a,#a1db01,#6a9a01,#406401
+            dist/github-snake-dark.svg?palette=github-dark&color_snake=#A1DB01&color_dots=#161b22,#263f06,#406401,#6a9a01,#A1DB01
+
+      - name: Push to output branch
+        uses: crazy-max/ghaction-github-pages@v4
+        with:
+          target_branch: output
+          build_dir: dist
+          jekyll: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

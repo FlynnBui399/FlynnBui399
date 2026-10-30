@@ -1,52 +1,97 @@
-<!-- X-ray film theme. SVGs in assets/xray/ are generated: edit scripts/build_svgs.py, then run `python scripts/build_svgs.py`. -->
-<!-- Palette: film #0A0F14 · panel #0F161D · line #1D2A33 · text #D8E6EE · muted #7F98A6 · amber #FFB000 -->
+<!-- Palette (Canopy): forest #1A2C04 · lime #A1DB01 · olive #406401 · line #506925 · heading #F4FCE7 · text #C8D8AE -->
 
-<p align="center">
-  <img src="./assets/xray/header.svg" width="100%" alt="BUI TRAN TAN PHAT — AI engineering student: vision, retrieval, medical imaging"/>
-</p>
+<div align="center">
 
-<p align="center">
-  <a href="http://www.linkedin.com/in/phatbtt-flynn-ai"><img src="./assets/xray/btn-linkedin.svg" height="40" alt="LinkedIn"/></a>
-  <a href="https://flynnbui399.github.io/FlynnBui399/"><img src="./assets/xray/btn-portfolio.svg" height="40" alt="Portfolio"/></a>
-  <a href="./BuiTranTanPhat_Resume.pdf"><img src="./assets/xray/btn-resume.svg" height="40" alt="Resume (PDF)"/></a>
-</p>
+<img src="./assets/hero.svg" width="100%" alt="Bui Tran Tan Phat · AI Engineering student at HCMUTE"/>
+
+<br/><br/>
+
+<a href="http://www.linkedin.com/in/phatbtt-flynn-ai"><img src="https://img.shields.io/badge/LinkedIn-A1DB01?style=for-the-badge&logo=data:image/svg%2bxml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZmlsbD0iIzE1MjcwMCIgZD0iTTIwLjQ1IDIwLjQ1aC0zLjU2di01LjU3YzAtMS4zMy0uMDItMy4wNC0xLjg1LTMuMDQtMS44NSAwLTIuMTQgMS40NS0yLjE0IDIuOTR2NS42N0g5LjM1VjloMy40MXYxLjU2aC4wNWMuNDgtLjkgMS42NC0xLjg1IDMuMzctMS44NSAzLjYgMCA0LjI3IDIuMzcgNC4yNyA1LjQ2djYuMjh6TTUuMzQgNy40M2EyLjA2IDIuMDYgMCAxIDEgMC00LjEzIDIuMDYgMi4wNiAwIDAgMSAwIDQuMTN6TTcuMTIgMjAuNDVIMy41NlY5aDMuNTZ2MTEuNDV6TTIyLjIyIDBIMS43N0MuNzkgMCAwIC43NyAwIDEuNzN2MjAuNTRDMCAyMy4yMy43OSAyNCAxLjc3IDI0aDIwLjQ1Yy45OCAwIDEuNzgtLjc3IDEuNzgtMS43M1YxLjczQzI0IC43NyAyMy4yIDAgMjIuMjIgMHoiLz48L3N2Zz4=" alt="LinkedIn"/></a>
+<a href="https://flynnbui399.github.io/FlynnBui399/"><img src="https://img.shields.io/badge/Portfolio-406401?style=for-the-badge&logo=googlechrome&logoColor=C5DCA2" alt="Portfolio"/></a>
+<a href="./BuiTranTanPhat_Resume.pdf"><img src="https://img.shields.io/badge/Resume-406401?style=for-the-badge&logo=readdotcv&logoColor=C5DCA2" alt="Resume"/></a>
+
+</div>
 
 <br/>
 
-<img src="./assets/xray/se01.svg" width="100%" alt="01 / About"/>
+## About
+
+<table>
+<tr>
+<td width="62%" valign="top">
+
+I'm an **AI Engineering student at HCMUTE** who builds practical AI workflows — from data preparation and model training to evaluation and retrieval-based applications.
+
+- **Now:** GenAI, RAG systems, LLM API integration, Vision-Language Models
+- **Strength:** Computer Vision, medical image analysis, model evaluation
+- **B.E. IT (AI)** · GPA **3.42/4.0** · graduating **Aug 2027** · open to **AI / GenAI internships**
+
+</td>
+<td width="38%" align="center" valign="middle">
+  <img src="./assets/avt.jpg" width="220" alt="Bui Tran Tan Phat"/>
+</td>
+</tr>
+</table>
+
+## Tech stack
 
 <p align="center">
-  <img src="./assets/xray/report.svg" width="100%" alt="About: AI Engineering student at HCMUTE, GPA 3.42/4.0, graduating 08/2027. Strong in computer vision and medical image analysis; building RAG systems, LLM integrations and VLMs. Open to AI / GenAI internships."/>
+  <img src="https://skillicons.dev/icons?i=python,cpp,cs,java,pytorch,sklearn,opencv,postgres,mysql,supabase,git,github,aws,vscode&perline=7" alt="Tech stack"/>
 </p>
 
-<img src="./assets/xray/se02.svg" width="100%" alt="02 / Tech stack"/>
+## Featured projects
 
-<p align="center">
-  <img src="./assets/xray/stack.svg" width="100%" alt="Tech stack: Python, C++, C#, Java; PyTorch, scikit-learn, LightGBM, Transformers; OpenCV, UNet++, EfficientNet, Qwen2.5-VL; Qdrant, ChromaDB, pgvector, bge-m3; Pandas, NumPy; Modal, AWS, PostgreSQL, MySQL, Git"/>
-</p>
+<table>
+<tr>
+<td width="50%" valign="top">
 
-<img src="./assets/xray/se03.svg" width="100%" alt="03 / Projects"/>
+### [ViDrugLens](https://github.com/FlynnBui399/vidruglens-ocr-vlm)
+OCR + **Qwen2.5-VL** extraction and **Qdrant RAG** for grounded answers on Vietnamese drug packages.
 
-<p align="center">
-  <a href="https://github.com/FlynnBui399/vidruglens-ocr-vlm"><img src="./assets/xray/card-vidruglens.svg" width="49%" alt="ViDrugLens: Vietnamese drug-package understanding with OCR, Qwen2.5-VL and Qdrant RAG"/></a>
-  <a href="https://github.com/FlynnBui399/skin-lession-classification-using-fusion-ham10000"><img src="./assets/xray/card-ham10000.svg" width="49%" alt="Skin-lesion classification on HAM10000: 0.946 OvR ROC-AUC, 0.807 accuracy"/></a>
-  <a href="https://github.com/FlynnBui399/DL-Research-Segmentation"><img src="./assets/xray/card-retina.svg" width="49%" alt="Retinal vessel segmentation on HRF with UNet++ and EfficientNet-B4: 0.964 accuracy, 0.771 Dice"/></a>
-  <a href="https://github.com/FlynnBui399/vietnamese-emoji-emotion-recognition"><img src="./assets/xray/card-vigoemotions.svg" width="49%" alt="ViGoEmotions: emoji-aware Vietnamese emotion recognition, EACL 2026 reproduction"/></a>
-</p>
+</td>
+<td width="50%" valign="top">
 
-<img src="./assets/xray/se04.svg" width="100%" alt="04 / Activity"/>
+### [Skin-Lesion Classification](https://github.com/FlynnBui399/skin-lession-classification-using-fusion-ham10000)
+Handcrafted features + clinical metadata on **HAM10000**, tuned LightGBM.
 
-<p align="center">
-  <img height="165" src="https://github-readme-stats.vercel.app/api?username=FlynnBui399&show_icons=true&bg_color=0A0F14&title_color=FFB000&icon_color=FFB000&text_color=D8E6EE&ring_color=FFB000&border_color=1D2A33&border_radius=0&rank_icon=github" alt="GitHub stats"/>
-  <img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=FlynnBui399&layout=compact&langs_count=6&bg_color=0A0F14&title_color=FFB000&text_color=D8E6EE&border_color=1D2A33&border_radius=0" alt="Top languages"/>
-</p>
+**0.946** ROC-AUC · **0.807** accuracy
 
-<p align="center">
-  <img src="https://streak-stats.demolab.com/?user=FlynnBui399&background=0A0F14&border=1D2A33&stroke=1D2A33&ring=FFB000&fire=FFB000&currStreakNum=D8E6EE&sideNums=D8E6EE&currStreakLabel=FFB000&sideLabels=7F98A6&dates=7F98A6&border_radius=0" alt="GitHub streak"/>
-</p>
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
 
-<p align="center">
-  <img src="./assets/xray/contrib.svg" width="100%" alt="Contributions: GitHub contributions over the last 12 months"/>
-</p>
+### [Retinal Vessel Segmentation](https://github.com/FlynnBui399/DL-Research-Segmentation)
+**UNet++** with an **EfficientNet-B4** encoder on the HRF dataset.
 
-<img src="./assets/xray/footer.svg" width="100%" alt="Thanks for stopping by"/>
+**0.964** accuracy · **0.771** Dice
+
+</td>
+<td width="50%" valign="top">
+
+### [ViGoEmotions](https://github.com/FlynnBui399/vietnamese-emoji-emotion-recognition)
+**ViSoBERT + Emoji2Vec** fusion, extending an EACL 2026 paper.
+
+**28** emotion labels · Vietnamese social-media text
+
+</td>
+</tr>
+</table>
+
+## GitHub stats
+
+<div align="center">
+
+<!-- Built by .github/workflows/MAIN.yml and published to the `output` branch -->
+<img height="165" src="https://raw.githubusercontent.com/FlynnBui399/FlynnBui399/output/stats.svg" alt="GitHub stats"/>
+<img height="165" src="https://raw.githubusercontent.com/FlynnBui399/FlynnBui399/output/top-langs.svg" alt="Top languages"/>
+
+<br/><br/>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/FlynnBui399/FlynnBui399/output/github-snake-dark.svg"/>
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/FlynnBui399/FlynnBui399/output/github-snake.svg"/>
+  <img src="https://raw.githubusercontent.com/FlynnBui399/FlynnBui399/output/github-snake-dark.svg" alt="Snake eating contributions"/>
+</picture>
+
+</div>
