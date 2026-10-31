@@ -43,12 +43,12 @@ BUBBLES = [("3.42", "GPA / 4.0"), ("2027", "graduating"), ("B.E. IT", "AI track"
 STACK = ["Python", "PyTorch", "Transformers", "scikit-learn", "LightGBM", "OpenCV", "UNet++",
          "Qwen2.5-VL", "Qdrant", "ChromaDB", "pgvector", "PostgreSQL", "AWS", "Modal"]
 
-# Depth label and zone name shown on each panel.
+# Section label shown on each panel.
 ZONES = {
-    "surface": ("0 m", "Profile"),
-    "twilight": ("200 m", "About me"),
-    "midnight": ("1,000 m", "Projects"),
-    "abyss": ("4,000 m", "GitHub activity"),
+    "surface": "Profile",
+    "twilight": "About me",
+    "midnight": "Projects",
+    "abyss": "GitHub activity",
 }
 
 PROJECTS = [
@@ -175,13 +175,9 @@ def wave(amp, mid, bottom):
 
 
 def depth_row(y, zone, line):
-    depth, label = ZONES[zone]
-    pw = measure(depth, 12, family="p") + 22
-    lx = 40 + pw + 12
-    lend = lx + measure(label, 12, family="p") + 14
-    return (f'<rect x="40.5" y="{y - 15.5}" width="{pw:.1f}" height="24" rx="12" fill="none" stroke="{line}"/>'
-            + t(51, y + 1, depth, 12, AQUA, family="p")
-            + t(lx, y + 1, label, 12, MUTED, family="p")
+    label = ZONES[zone]
+    lend = 40 + measure(label, 12, family="p") + 14
+    return (t(40, y + 1, label, 12, AQUA, family="p")
             + f'<path d="M{lend:.1f} {y - 3}H{W - 40}" stroke="{line}"/>')
 
 
@@ -276,8 +272,7 @@ def build_strip(zone, fill, line, stroke=None, dots=()):
     edge = f' stroke="{stroke}"' if stroke else ""
     body = (f'<rect x=".5" y=".5" width="{W - 1}" height="{H - 1}" rx="24" fill="{fill}"{edge}/>'
             + plankton(dots) + depth_row(46, zone, line))
-    depth, label = ZONES[zone]
-    return svg(W, H, body, f"{depth}: {label}")
+    return svg(W, H, body, ZONES[zone])
 
 
 def build_footer():
