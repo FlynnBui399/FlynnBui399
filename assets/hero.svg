@@ -1,9 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="300" viewBox="0 0 1200 300" role="img" aria-labelledby="title">
-  <title id="title">Bui Tran Tan Phat · AI Engineering student at HCMUTE</title>
-  <!-- Canopy palette: forest #1A2C04 · heading #F4FCE7 · body #C8D8AE -->
-  <rect width="1200" height="300" rx="32" fill="#1A2C04"/>
-  <g font-family="'Segoe UI', 'Noto Sans', -apple-system, Helvetica, Arial, sans-serif" text-anchor="middle">
-    <text x="600" y="152" font-size="76" font-weight="700" letter-spacing="-1.5" fill="#F4FCE7">Bui Tran Tan Phat</text>
-    <text x="600" y="212" font-size="28" fill="#C8D8AE">AI Engineering student at HCMUTE · VLM, RAG &amp; medical CV</text>
-  </g>
-</svg>
