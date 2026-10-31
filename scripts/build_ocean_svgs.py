@@ -87,6 +87,9 @@ PROJECTS = [
 BUTTONS = [("linkedin", "LinkedIn", True), ("portfolio", "Portfolio", False), ("resume", "Resume", False)]
 FOOTER = "Thanks for visiting."
 
+# Section titles shown between panels: (file slug, ZONES key, note on the right).
+HEADINGS = [("projects", "midnight", "Selected repositories"), ("activity", "abyss", "Updated every 12 hours")]
+
 
 # ── Fonts and text ───────────────────────────────────────────────────────────
 def _b64(path: Path) -> str:
@@ -267,12 +270,27 @@ def build_twilight():
     return svg(W, H, "".join(body), about_alt())
 
 
-def build_strip(zone, fill, line, stroke=None, dots=()):
-    H = 80
-    edge = f' stroke="{stroke}"' if stroke else ""
-    body = (f'<rect x=".5" y=".5" width="{W - 1}" height="{H - 1}" rx="24" fill="{fill}"{edge}/>'
-            + plankton(dots) + depth_row(46, zone, line))
-    return svg(W, H, body, ZONES[zone])
+# Section titles sit straight on the GitHub page, so they come in a dark and a light version
+# and the README picks one with <picture> to match the viewer's theme.
+HEADING_THEMES = {
+    "dark": {"title": TEXT, "meta": MUTED, "line": "#1F3B52", "wave": AQUA},
+    "light": {"title": "#0B2A42", "meta": "#4A6A80", "line": "#C9DCE6", "wave": "#0F9E8E"},
+}
+
+
+def build_heading(zone, meta, theme):
+    H = 56
+    c = HEADING_THEMES[theme]
+    title = ZONES[zone]
+    tx = 40 + 40
+    line_from = tx + measure(title, 24, 700) + 18
+    line_to = W - 40 - measure(meta, 13) - 18
+    body = (f'<path d="M40 30 q5 -8 10 0 t10 0 t10 0" fill="none" stroke="{c["wave"]}" stroke-width="2.5" '
+            f'stroke-linecap="round"/>'
+            + t(tx, 37, title, 24, c["title"], 700)
+            + f'<path d="M{line_from:.1f} 29H{line_to:.1f}" stroke="{c["line"]}"/>'
+            + t(W - 40, 34, meta, 13, c["meta"], anchor="end"))
+    return svg(W, H, body, f"{title}: {meta}")
 
 
 def build_footer():
@@ -397,9 +415,8 @@ def main():
     files = {
         "hero.svg": build_hero(),
         "twilight.svg": build_twilight(),
-        "midnight.svg": build_strip("midnight", MIDNIGHT, "#1F5A80"),
-        "abyss.svg": build_strip("abyss", ABYSS, "#16466B", stroke="#10324D",
-                                 dots=[(300, 22, 1.4, 0), (520, 60, 1.2, .8), (760, 20, 1.4, 1.5)]),
+        **{f"heading-{slug}-{theme}.svg": build_heading(zone, meta, theme)
+           for slug, zone, meta in HEADINGS for theme in HEADING_THEMES},
         "footer.svg": build_footer(),
     }
     for slug, label, filled in BUTTONS:

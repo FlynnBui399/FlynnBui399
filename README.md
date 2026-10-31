@@ -16,7 +16,10 @@
 </p>
 
 <p align="center">
-  <img src="./assets/ocean/midnight.svg" width="100%" alt="Projects"/>
+  <picture>
+    <source media="(prefers-color-scheme: light)" srcset="./assets/ocean/heading-projects-light.svg"/>
+    <img src="./assets/ocean/heading-projects-dark.svg" width="100%" alt="Projects"/>
+  </picture>
 </p>
 
 <p align="center">
@@ -27,7 +30,10 @@
 </p>
 
 <p align="center">
-  <img src="./assets/ocean/abyss.svg" width="100%" alt="GitHub activity"/>
+  <picture>
+    <source media="(prefers-color-scheme: light)" srcset="./assets/ocean/heading-activity-light.svg"/>
+    <img src="./assets/ocean/heading-activity-dark.svg" width="100%" alt="GitHub activity"/>
+  </picture>
 </p>
 
 <p align="center">
