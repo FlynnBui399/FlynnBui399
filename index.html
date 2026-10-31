@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description"
     content="Bui Tran Tan Phat - AI Engineering Intern focused on GenAI, Computer Vision, and Vision-Language Models.">
-  <title>Bui Tran Tan Phat | AI Enginneering Portfolio</title>
+  <title>Bui Tran Tan Phat | AI Engineering Portfolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -467,6 +467,47 @@
       margin-bottom: 0;
     }
 
+    .project-link {
+      display: inline-flex;
+      margin-top: var(--space-4);
+      color: var(--text);
+      border-bottom: 2px solid var(--primary);
+      font-family: "JetBrains Mono", monospace;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    .project-link:hover {
+      color: var(--primary);
+    }
+
+    .other-work {
+      padding: var(--space-5) var(--space-6);
+      border: 2px dashed var(--line);
+      border-radius: var(--radius-md);
+      color: var(--muted);
+    }
+
+    .other-work h3 {
+      margin-bottom: var(--space-3);
+      color: var(--text);
+      font-size: 1rem;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+
+    .other-work ul {
+      margin: 0;
+      padding-left: 1.2em;
+    }
+
+    .other-work a {
+      color: var(--text);
+      font-weight: 700;
+      border-bottom: 1px solid var(--primary);
+    }
+
     .skill-layout {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -565,14 +606,6 @@
       height: 30px;
       display: block;
       object-fit: contain;
-      transform: translateY(-15px);
-    }
-
-    .contact-icon svg {
-      width: 26px;
-      height: 26px;
-      display: block;
-      fill: currentColor;
     }
 
 
@@ -761,6 +794,63 @@
         <div class="project-stack">
           <article class="project">
             <div>
+              <h3>ViDrugLens: Vietnamese Drug-Package Understanding</h3>
+              <span class="metric">OCR / Qwen2.5-VL / Qdrant RAG</span>
+            </div>
+            <div>
+              <p>
+                Reads drug package, blister, and label images with OCR plus an optional Modal-hosted Qwen2.5-VL
+                extractor, then checks that the two agree before normalizing and matching the drug name.
+              </p>
+              <p>
+                Retrieves evidence from Qdrant and returns conservative grounded answers with the source and a
+                safety warning. Scoped as an information tool, not a diagnosis or prescription system.
+              </p>
+              <a class="project-link" href="https://github.com/FlynnBui399/vidruglens-ocr-vlm" target="_blank"
+                rel="noopener">View repository</a>
+            </div>
+          </article>
+
+          <article class="project">
+            <div>
+              <h3>ViGoEmotions: Emoji-Aware Emotion Recognition</h3>
+              <span class="metric">EACL 2026 reproduction / 28 labels</span>
+            </div>
+            <div>
+              <p>
+                Reproduces the ViSoBERT multi-label baseline from the ViGoEmotions paper (EACL 2026) on Vietnamese
+                social-media text, trained with Asymmetric Loss on a Modal A100 GPU.
+              </p>
+              <p>
+                Extends it with an Emoji2Vec dual-encoder fusion, R-Drop regularization, TACO contrastive losses,
+                and per-class decision threshold optimization.
+              </p>
+              <a class="project-link" href="https://github.com/FlynnBui399/vietnamese-emoji-emotion-recognition"
+                target="_blank" rel="noopener">View repository</a>
+            </div>
+          </article>
+
+          <article class="project">
+            <div>
+              <h3>Don't Starve Together Wiki Chatbot</h3>
+              <span class="metric">bge-m3 / Supabase pgvector / DeepSeek</span>
+            </div>
+            <div>
+              <p>
+                A Vietnamese RAG chatbot over the Don't Starve Together wiki: pages are embedded with bge-m3,
+                stored in Supabase pgvector, and answered by DeepSeek with cited sources.
+              </p>
+              <p>
+                When no evidence is found, the API searches the wiki, ingests the most relevant pages, and retries
+                retrieval automatically.
+              </p>
+              <a class="project-link" href="https://github.com/FlynnBui399/Vietnamese-DontStarveTogether-RAG"
+                target="_blank" rel="noopener">View repository</a>
+            </div>
+          </article>
+
+          <article class="project">
+            <div>
               <h3>Skin-Lesion Classification on HAM10000</h3>
               <span class="metric">Accuracy 0.807 / Multi-class ROC-AUC 0.946</span>
             </div>
@@ -773,6 +863,9 @@
                 Trained and fine-tuned LightGBM classifiers through randomized search for severely imbalanced
                 medical-image data.
               </p>
+              <a class="project-link"
+                href="https://github.com/FlynnBui399/skin-lession-classification-using-fusion-ham10000"
+                target="_blank" rel="noopener">View repository</a>
             </div>
           </article>
 
@@ -790,6 +883,27 @@
                 Applied data augmentation and validated results with Dice, IoU, Sensitivity, and Accuracy on the
                 HRF dataset, focusing on micro-vessels often missed by traditional methods.
               </p>
+              <a class="project-link" href="https://github.com/FlynnBui399/DL-Research-Segmentation" target="_blank"
+                rel="noopener">View repository</a>
+            </div>
+          </article>
+
+          <article class="project">
+            <div>
+              <h3>Enhanced Eigenfaces for Face Verification</h3>
+              <span class="metric">PCA / SVD from scratch</span>
+            </div>
+            <div>
+              <p>
+                Implements classical Eigenfaces from scratch (no scikit-learn PCA), then improves it with a
+                multi-scale pyramid, ensemble distance metrics, and Tan-Triggs illumination normalization.
+              </p>
+              <p>
+                Evaluated with 10-fold verification on LFW, CFP-FP, and AgeDB-30 (AUC, EER), with ablations over
+                components and scales.
+              </p>
+              <a class="project-link" href="https://github.com/FlynnBui399/Face-Verification-with-Enhanced-Eigenfaces"
+                target="_blank" rel="noopener">View repository</a>
             </div>
           </article>
 
@@ -806,8 +920,21 @@
                 Integrated LLMs through DeepSeek API access and local deployment to synthesize answers about
                 admissions, faculty details, and academic programs.
               </p>
+              <a class="project-link" href="https://github.com/FlynnBui399/NLP-Simple-RAG-System" target="_blank"
+                rel="noopener">View repository</a>
             </div>
           </article>
+
+          <div class="other-work">
+            <h3>Other work</h3>
+            <ul>
+              <li><a href="https://github.com/FlynnBui399/MOPR-Group03-Android-Projects" target="_blank"
+                  rel="noopener">MOPR Android Projects</a>: three native Java apps (Calculator, Fonos audiobook
+                player, Pocket photo sharing) built in a team of three.</li>
+              <li><a href="https://github.com/FlynnBui399/AWS-Regkonition-Web" target="_blank" rel="noopener">AWS
+                  Rekognition Web</a>: a web app that detects objects in images with the AWS Rekognition API.</li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
@@ -824,9 +951,21 @@
             <div class="tags">
               <span class="tag">Python</span>
               <span class="tag">PyTorch</span>
-              <span class="tag">MySQL</span>
-              <span class="tag">ChromaDB</span>
+              <span class="tag">Transformers</span>
+              <span class="tag">scikit-learn</span>
+              <span class="tag">LightGBM</span>
               <span class="tag">OpenCV</span>
+              <span class="tag">Qwen2.5-VL</span>
+              <span class="tag">Qdrant</span>
+              <span class="tag">ChromaDB</span>
+              <span class="tag">Supabase pgvector</span>
+              <span class="tag">bge-m3</span>
+              <span class="tag">DeepSeek API</span>
+              <span class="tag">Modal</span>
+              <span class="tag">AWS</span>
+              <span class="tag">MySQL</span>
+              <span class="tag">Java / Android</span>
+              <span class="tag">Firebase</span>
               <span class="tag">Pandas</span>
               <span class="tag">NumPy</span>
               <span class="tag">Matplotlib</span>
@@ -876,9 +1015,7 @@
         <div class="contact-links">
           <a class="contact-card" href="https://github.com/FlynnBui399" target="_blank" rel="noopener">
             <span class="contact-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" focusable="false">
-                <img src="assets/github.png" alt="">
-              </svg>
+              <img src="assets/github.png" alt="">
             </span>
             <span class="contact-text">
               <span>GitHub</span>
@@ -887,9 +1024,7 @@
           </a>
           <a class="contact-card" href="http://www.linkedin.com/in/phatbtt-flynn-ai" target="_blank" rel="noopener">
             <span class="contact-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" focusable="false">
-                <img src="assets/linkedin.png" alt="">
-              </svg>
+              <img src="assets/linkedin.png" alt="">
             </span>
             <span class="contact-text">
               <span>LinkedIn</span>
@@ -898,24 +1033,11 @@
           </a>
           <a class="contact-card" href="mailto:buiphat251399@gmail.com" target="_blank" rel="noopener">
             <span class="contact-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" focusable="false">
-                <img src="assets/email.png" alt="">
-              </svg>
+              <img src="assets/email.png" alt="">
             </span>
             <span class="contact-text">
               <span>Email</span>
               <strong>buiphat251399@gmail.com</strong>
-            </span>
-          </a>
-           <a class="contact-card" href="tel:+84907251399" target="_blank" rel="noopener">
-            <span class="contact-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" focusable="false">
-                <img src="assets/phone-call.png" alt="">
-              </svg>
-            </span>
-            <span class="contact-text">
-              <span>Phone (+84)</span>
-              <strong>0907.25.1399</strong>
             </span>
           </a>
         </div>
