@@ -40,8 +40,7 @@ ABOUT = ("I build practical AI workflows, from data preparation and model traini
          "and retrieval-based apps. Strongest in computer vision and medical image analysis, now "
          "going deeper into RAG, LLM integration and vision-language models.")
 BUBBLES = [("3.42", "GPA / 4.0"), ("2027", "graduating"), ("B.E. IT", "AI track")]
-STACK = ["Python", "PyTorch", "Transformers", "scikit-learn", "LightGBM", "OpenCV", "UNet++",
-         "Qwen2.5-VL", "Qdrant", "ChromaDB", "pgvector", "PostgreSQL", "AWS", "Modal"]
+STACK = ["Python", "PyTorch", "ChromaDB", "PostgreSQL", "AWS"]
 
 # Section label shown on each panel.
 ZONES = {
