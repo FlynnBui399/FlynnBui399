@@ -2,7 +2,7 @@
 <!-- Palette: sky #0B1F33 · surface #0F4C75 · twilight #0B3558 · midnight #082640 · abyss #04121F · aqua #5EEAD4 · coral #FF9B85 -->
 
 <p align="center">
-  <img src="./assets/ocean/hero.svg" width="100%" alt="Bui Tran Tan Phat: AI Engineering student at HCMUTE diving into computer vision, vision-language models and RAG. Open to AI / GenAI internships, graduating 08/2027."/>
+  <img src="./assets/ocean/hero.svg" width="100%" alt="Bui Tran Tan Phat: AI Engineering student at HCMUTE focused on computer vision, vision-language models and RAG. Open to AI / GenAI internships, graduating 08/2027."/>
 </p>
 
 <p align="center">
@@ -12,11 +12,11 @@
 </p>
 
 <p align="center">
-  <img src="./assets/ocean/twilight.svg" width="100%" alt="200 m, twilight zone. About me: I build practical AI workflows, from data preparation and model training to evaluation and retrieval-based apps. Strongest in computer vision and medical image analysis, now going deeper into RAG, LLM integration and vision-language models. GPA 3.42 / 4.0, B.E. IT (AI track), graduating 2027. Tools: Python, PyTorch, Transformers, scikit-learn, LightGBM, OpenCV, UNet++, Qwen2.5-VL, Qdrant, ChromaDB, pgvector, PostgreSQL, AWS, Modal."/>
+  <img src="./assets/ocean/twilight.svg" width="100%" alt="About me: I build practical AI workflows, from data preparation and model training to evaluation and retrieval-based apps. Strongest in computer vision and medical image analysis, now going deeper into RAG, LLM integration and vision-language models. GPA 3.42 / 4.0, B.E. IT (AI track), graduating 2027. Tools: Python, PyTorch, Transformers, scikit-learn, LightGBM, OpenCV, UNet++, Qwen2.5-VL, Qdrant, ChromaDB, pgvector, PostgreSQL, AWS, Modal."/>
 </p>
 
 <p align="center">
-  <img src="./assets/ocean/midnight.svg" width="100%" alt="1,000 m, midnight zone: what I've built"/>
+  <img src="./assets/ocean/midnight.svg" width="100%" alt="Projects"/>
 </p>
 
 <p align="center">
@@ -27,7 +27,7 @@
 </p>
 
 <p align="center">
-  <img src="./assets/ocean/abyss.svg" width="100%" alt="4,000 m, the abyss: activity"/>
+  <img src="./assets/ocean/abyss.svg" width="100%" alt="GitHub activity"/>
 </p>
 
 <p align="center">
@@ -37,5 +37,5 @@
 </p>
 
 <p align="center">
-  <img src="./assets/ocean/footer.svg" width="100%" alt="You've reached the sea floor. Thanks for diving in."/>
+  <img src="./assets/ocean/footer.svg" width="100%" alt="Thanks for visiting."/>
 </p>

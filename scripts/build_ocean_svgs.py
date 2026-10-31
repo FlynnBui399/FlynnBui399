@@ -31,9 +31,9 @@ W = 880
 # Outfit ships as its latin subset: Vietnamese letters beyond Latin-1 (ồ, ế, đ, ...)
 # have no glyph, and the build stops if one slips in.
 NAME = "Bui Tran Tan Phat"
-TAGLINE = "AI Engineering student diving into computer vision, vision-language models and RAG."
-SKY_NOTE = "above water · Ho Chi Minh City"
-DIVE_LOG = [("Base", "HCMUTE"), ("Surfacing", "08/2027")]
+TAGLINE = "AI Engineering student focused on computer vision, vision-language models and RAG."
+SKY_NOTE = "Ho Chi Minh City, Vietnam"
+DIVE_LOG = [("School", "HCMUTE"), ("Expected graduation", "08/2027")]
 STATUS = "open to internships"
 
 ABOUT = ("I build practical AI workflows, from data preparation and model training to evaluation "
@@ -45,10 +45,10 @@ STACK = ["Python", "PyTorch", "Transformers", "scikit-learn", "LightGBM", "OpenC
 
 # Depth label and zone name shown on each panel.
 ZONES = {
-    "surface": ("0 m", "Surface"),
-    "twilight": ("200 m", "Twilight zone · about me"),
-    "midnight": ("1,000 m", "Midnight zone · what I've built"),
-    "abyss": ("4,000 m", "The abyss · activity"),
+    "surface": ("0 m", "Profile"),
+    "twilight": ("200 m", "About me"),
+    "midnight": ("1,000 m", "Projects"),
+    "abyss": ("4,000 m", "GitHub activity"),
 }
 
 PROJECTS = [
@@ -84,7 +84,7 @@ PROJECTS = [
 ]
 
 BUTTONS = [("linkedin", "LinkedIn", True), ("portfolio", "Portfolio", False), ("resume", "Resume", False)]
-FOOTER = "You've reached the sea floor. Thanks for diving in."
+FOOTER = "Thanks for visiting."
 
 
 # ── Fonts and text ───────────────────────────────────────────────────────────
@@ -204,7 +204,7 @@ def build_hero():
     stars = [(120, 30, 1.6, 0), (262, 62, 1.2, .6), (430, 26, 1.6, 1.2), (590, 66, 1.2, .3), (700, 96, 1.2, .9)]
     tag = wrap(TAGLINE, 17, 520)
     card = [f'<rect x="600.5" y="222.5" width="239" height="123" rx="18" fill="#0B3E62" stroke="#2A6890"/>',
-            t(620, 248, "dive log", 11, MUTED, family="p")]
+            t(620, 248, "at a glance", 11, MUTED, family="p")]
     for k, (label, value) in enumerate(DIVE_LOG):
         card += [t(620, 278 + 26 * k, label, 13, MUTED), t(820, 278 + 26 * k, value, 13, TEXT, 600, anchor="end")]
     dot_x = 820 - measure(STATUS, 13, 600) - 12
@@ -264,10 +264,10 @@ def build_twilight():
         depth_row(46, "twilight", "#2B6A8F"),
         "".join(t(40, 104 + 29 * k, line, 17, "#D5ECF4") for k, line in enumerate(lines)),
         "".join(bubbles),
-        t(40, label_y, "What I carry", 13, MUTED, 600),
+        t(40, label_y, "Tools I use", 13, MUTED, 600),
         "".join(chips),
     ]
-    alt = f"200 m, twilight zone. About me: {ABOUT} Tools: {', '.join(STACK)}."
+    alt = f"About me: {ABOUT} Tools: {', '.join(STACK)}."
     return svg(W, H, "".join(body), alt)
 
 
