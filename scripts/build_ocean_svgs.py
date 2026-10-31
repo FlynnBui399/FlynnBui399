@@ -41,7 +41,7 @@ STATUS = "open to internships"
 ABOUT = ("I build practical AI workflows, from data preparation and model training to evaluation "
          "and retrieval-based apps. Strongest in computer vision and medical image analysis, now "
          "going deeper into RAG, LLM integration and vision-language models.")
-BUBBLES = [("3.42", "GPA / 4.0"), ("2027", "graduating"), ("B.E. IT", "AI track")]
+BUBBLES = [("3.50", "GPA / 4.0"), ("2027", "graduating"), ("B.E. IT", "AI track")]
 STACK = ["Python", "PyTorch", "ChromaDB", "PostgreSQL", "AWS"]
 
 # Section label shown on each panel.
