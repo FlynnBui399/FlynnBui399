@@ -12,7 +12,7 @@
 </p>
 
 <p align="center">
-  <img src="./assets/ocean/twilight.svg" width="100%" alt="About me: I build practical AI workflows, from data preparation and model training to evaluation and retrieval-based apps. Strongest in computer vision and medical image analysis, now going deeper into RAG, LLM integration and vision-language models. GPA 3.42 / 4.0, B.E. IT (AI track), graduating 2027. Tools: Python, PyTorch, Transformers, scikit-learn, LightGBM, OpenCV, UNet++, Qwen2.5-VL, Qdrant, ChromaDB, pgvector, PostgreSQL, AWS, Modal."/>
+  <img src="./assets/ocean/twilight.svg" width="100%" alt="About me: I build practical AI workflows, from data preparation and model training to evaluation and retrieval-based apps. Strongest in computer vision and medical image analysis, now going deeper into RAG, LLM integration and vision-language models. 3.42 GPA / 4.0, 2027 graduating, B.E. IT AI track. Tools: Python, PyTorch, ChromaDB, PostgreSQL, AWS."/>
 </p>
 
 <p align="center">

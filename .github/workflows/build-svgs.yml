@@ -1,0 +1,42 @@
+# Rebuilds assets/ocean/*.svg (and the README alt text) whenever the build script or its fonts change,
+# so the profile can be edited straight from github.com without running Python locally.
+
+name: Build Profile SVGs
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - scripts/build_ocean_svgs.py
+      - scripts/fonts/**
+  workflow_dispatch: # run manually from the Actions tab
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install font tooling
+        run: pip install fonttools
+
+      - name: Build SVGs
+        run: python scripts/build_ocean_svgs.py
+
+      # Commits made with GITHUB_TOKEN do not trigger workflows, so this cannot loop.
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/ocean README.md
+          git diff --cached --quiet && echo "Nothing changed" && exit 0
+          git commit -m "Rebuild profile SVGs"
+          git push

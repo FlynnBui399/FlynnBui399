@@ -4,12 +4,14 @@ Edit the CONTENT section, then run from the repo root:
 
     python scripts/build_ocean_svgs.py
 
-Output goes to assets/ocean/. Fonts (Outfit and IBM Plex Mono, both OFL) are embedded
+Output goes to assets/ocean/, and the README alt text for the about panel is kept in sync.
+Pushing a change to this file also runs it on GitHub (.github/workflows/build-svgs.yml). Fonts (Outfit and IBM Plex Mono, both OFL) are embedded
 into every SVG because GitHub blocks external resources inside images. Text is measured
 with fontTools so wrapping and pill widths follow the real glyph widths.
 """
 
 import base64
+import re
 from html import escape
 from pathlib import Path
 
@@ -262,8 +264,7 @@ def build_twilight():
         t(40, label_y, "Tools I use", 13, MUTED, 600),
         "".join(chips),
     ]
-    alt = f"About me: {ABOUT} Tools: {', '.join(STACK)}."
-    return svg(W, H, "".join(body), alt)
+    return svg(W, H, "".join(body), about_alt())
 
 
 def build_strip(zone, fill, line, stroke=None, dots=()):
@@ -370,6 +371,25 @@ def build_card(p, desc_lines):
     return svg(CW, H, "".join(body), f"{p['title']}: {p['desc']} {stats}.")
 
 
+def about_alt():
+    facts = ", ".join(f"{value} {label}" for value, label in BUBBLES)
+    return f"About me: {ABOUT} {facts}. Tools: {', '.join(STACK)}."
+
+
+def sync_readme_alt():
+    """Rewrite the about panel's alt text in README.md so screen readers get the current tools."""
+    readme = ROOT / "README.md"
+    text = readme.read_text(encoding="utf-8")
+    alt = escape(about_alt(), quote=True)
+    new, n = re.subn(r'(src="\./assets/ocean/twilight\.svg"[^>]*?alt=")[^"]*(")',
+                     lambda m: m.group(1) + alt + m.group(2), text)
+    if n != 1:
+        raise SystemExit("README.md has no twilight.svg image with an alt attribute to update")
+    if new != text:
+        readme.write_text(new, encoding="utf-8")
+        print("updated README.md alt text")
+
+
 # ── Main ─────────────────────────────────────────────────────────────────────
 def main():
     OUT.mkdir(parents=True, exist_ok=True)
@@ -389,6 +409,7 @@ def main():
     for name, content in files.items():
         (OUT / name).write_text(content, encoding="utf-8")
         print(f"wrote assets/ocean/{name} ({len(content) // 1024} KB)")
+    sync_readme_alt()
 
 
 if __name__ == "__main__":
